@@ -1,0 +1,549 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+
+\newcommand{\paper}{\emph{Failing to keep the balance: explicit formulae and topological recursion for leaky Hurwitz numbers}}
+\newcommand{\arxiv}{arXiv:2603.06094v1}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\ellp}{\ell}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Res}{\operatorname{Res}}
+\newcommand{\sgn}{\operatorname{sgn}}
+
+\title{Comments and suggested corrections for\\
+\paper\\
+\large \arxiv}
+\author{Dennj Osele\\\texttt{dennj@latinum.ai}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\noindent
+Dear Authors,
+
+\medskip
+\noindent
+These comments concern \arxiv.  References below are to the version of the manuscript dated March 6, 2026, using the page, section, definition, theorem, example, and equation numbers of that version.  I have focused on points that appear to affect mathematical correctness or internal consistency, together with a few smaller typographical issues that may otherwise confuse readers.
+
+\section*{Executive summary}
+
+The following issues appear to require correction.
+\begin{enumerate}[label=\textbf{\arabic*.}]
+   \item Definition 2.2, p. 6, equation (2.10) and the following sentence: the Riemann--Hurwitz condition and completed-cycle normalization appear inconsistent with later conventions.
+   \item Section 2.3, p. 8, equation (2.19): the Heisenberg commutator has the wrong Kronecker delta.
+   \item Definition 2.2, p. 6: the statement ``$f_{(2)}=p_2$'' is false in the stated normalization; one has $f_{(2)}=p_2/2$.
+   \item Theorem 3.12 and proof, pp. 21--22, equations (3.17)--(3.21): the genus/profile formula is wrong, and equation (3.20) has a sign typo.
+   \item Corollary 6.13 and Example 6.15, p. 37, equations (6.33)--(6.35): the displayed $y(z)$ is missing a factor $1/r$.
+   \item Theorem 2.8, Remark 2.9, and Example 7.7, pp. 9 and 39: the coefficient in $M_k$ is inconsistent.
+   \item Definition 3.1, Example 4.8, and the Gromov--Witten paragraph after equation (2.12): smaller notation/convention errors.
+   \item Proposition 6.8, p. 36, equation (6.20): the $n=1$ case needs an explicit regularisation convention.
+\end{enumerate}
+
+\section{Definition 2.2: Riemann--Hurwitz condition and normalization}
+
+\subsection*{Location}
+Definition 2.2, p. 6, immediately before equation (2.10), states that
+\[
+   \sum_i r_i = 2g-2+\ellp(\mu)+\ellp(\nu).
+\]
+Equation (2.10) then defines
+\[
+   h^{\mathbf r,\bullet}_{g;\mu,\nu}
+   = \frac{1}{\prod_i\mu_i\prod_j\nu_j}
+     \sum_{\lambda\vdash d}\chi_\lambda(\mu)\chi_\lambda(\nu)
+     \prod_{i=1}^n \frac{p_{r_i}}{(r_i-1)!}.
+\]
+The paragraph then says that ordinary double Hurwitz numbers are recovered for $r_i=2$, because $f_{(2)}=p_2$.
+
+\subsection*{Issue}
+The Riemann--Hurwitz condition should involve the ramification defect $r_i-1$, not $r_i$.  The condition should read
+\begin{equation}\label{eq:RH-correct}
+   \sum_i (r_i-1)=2g-2+\ellp(\mu)+\ellp(\nu).
+\end{equation}
+This is also the condition used later in the paper: see the setup preceding Definition 2.24 on p. 13 and Theorem 2.25, equations (2.55) and (2.57).  It is also consistent with the local tropical condition in Theorem 2.25,
+\[
+   r_i-1 = 2g(v_i)-2+\operatorname{val}(v_i).
+\]
+
+For a quick check, take the simple Hurwitz specialization $r_i=2$.  If there are $b$ simple branch points, classical Riemann--Hurwitz gives
+\[
+   b=2g-2+\ellp(\mu)+\ellp(\nu).
+\]
+The printed condition would instead give $2b=2g-2+\ellp(\mu)+\ellp(\nu)$.
+
+There is a separate normalization inconsistency in the same definition.  The formula in (2.10), the recovery claim immediately after it, and the later Fock-space normalization in Definition 2.24 / Example 2.12 do not agree as written.  At the very least, the claim $f_{(2)}=p_2$ is false; see Section \ref{sec:f2p2} below.  If the intended normalization is the one used later in Definition 2.24, where each completed-cycle insertion is represented by $F^{k_i}_{r_i}/r_i$, then the specialization $k_i=0$ corresponds to $p_{r_i}/r_i$, not to $p_{r_i}/(r_i-1)!$ in the eigenvalue formula.  The authors may want to decide explicitly which normalization is intended and make Definition 2.2, Theorem 2.3, Definition 2.24, and Example 2.12 consistent with it.
+
+\subsection*{Suggested correction}
+Replace the displayed Riemann--Hurwitz condition in Definition 2.2 by \eqref{eq:RH-correct}.  Then revise the normalization in (2.10) and the following recovery statement.  In particular, the sentence ``since $f_{(2)}=p_2$'' should be removed or corrected.
+
+\section{Equation (2.19): Heisenberg commutation relation}
+
+\subsection*{Location}
+Section 2.3, p. 8, equation (2.19), states
+\begin{equation}\label{eq:printed-Heis}
+   [J_m,J_n]=n\delta_{m,n}c.
+\end{equation}
+
+\subsection*{Issue}
+The relation \eqref{eq:printed-Heis} cannot be correct.  For example, setting $m=n=1$ gives
+\[
+   [J_1,J_1]=c,
+\]
+whereas a commutator must satisfy $[A,A]=0$.
+
+It also contradicts the bosonic realization written immediately afterwards in equation (2.21): for $k>0$,
+\[
+   J_k\mapsto k\frac{\partial}{\partial p_k},\qquad J_{-k}\mapsto p_k.
+\]
+This gives
+\[
+   [J_k,J_{-k}]
+   =\left[k\frac{\partial}{\partial p_k},p_k\right]=k.
+\]
+Thus the compatible Heisenberg relation is
+\begin{equation}\label{eq:correct-Heis}
+   [J_m,J_n]=m\delta_{m+n,0}c,
+\end{equation}
+up to the equivalent convention $-n\delta_{m+n,0}c$.
+
+\subsection*{Suggested correction}
+Replace equation (2.19) by \eqref{eq:correct-Heis}.
+
+\section{The claim $f_{(2)}=p_2$ is false}\label{sec:f2p2}
+
+\subsection*{Location}
+Definition 2.2, p. 6, after equation (2.10), says that completed cycles recover ordinary double Hurwitz numbers since $f_{(2)}=p_2$ by the Frobenius character formula.
+
+\subsection*{Issue}
+With the definitions in equations (2.2) and (2.4), one instead has
+\begin{equation}\label{eq:f2-p2-half}
+   f_{(2)}=\frac{p_2}{2}.
+\end{equation}
+Indeed, evaluate both sides on the partition $\lambda=(2)$.  By equation (2.4), using $\zeta(-2)=0$,
+\[
+   p_2((2))
+   =\left(2-1+\frac12\right)^2-\left(-1+\frac12\right)^2
+   =\left(\frac32\right)^2-\left(-\frac12\right)^2
+   =2.
+\]
+On the other hand, for $S_2$ the conjugacy class of type $(2)$ has size $1$, the representation indexed by $(2)$ has dimension $1$, and $\chi^{(2)}((2))=1$.  Hence equation (2.2) gives
+\[
+   f_{(2)}((2))=1.
+\]
+Thus $f_{(2)}((2))=p_2((2))/2$, not $p_2((2))$.
+
+This affects the sentence claiming recovery of ordinary double Hurwitz numbers.  If each simple branch point contributes $p_2$ rather than $p_2/2$, then a formula with $b$ simple branch points is off by a factor $2^b$ relative to the central-character normalization in equation (2.9).
+
+\subsection*{Suggested correction}
+Replace the sentence by a normalization-consistent statement, e.g.
+\[
+   f_{(2)}=p_2/2,
+\]
+and adjust equation (2.10) or the surrounding convention accordingly.
+
+\section{Theorem 3.12: wall-crossing formula}
+
+\subsection*{Location}
+Theorem 3.12, p. 21, equation (3.17), and its proof on pp. 21--22, especially equations (3.19)--(3.21).
+
+\subsection{The genus/profile formula is wrong}
+
+The theorem states that
+\[
+   g_1=\frac{\alpha_1 r+2-\ellp(x_I,-z)}{2}
+\]
+``and analogously'' for $g_2,g_3$.
+
+There are two problems.
+
+First, the completed-cycle contribution is $r-1$, not $r$.  For the first component, with $\alpha_1$ vertices of completed-cycle index $r$, the Riemann--Hurwitz condition is
+\[
+   \alpha_1(r-1)=2g_1-2+\ellp(x_I)+\ellp(y).
+\]
+Thus
+\begin{equation}\label{eq:g1-correct}
+   g_1=\frac{\alpha_1(r-1)+2-\ellp(x_I)-\ellp(y)}{2}.
+\end{equation}
+Second, the profile in the first factor of (3.17) is $(x_I,y)$, not $(x_I,z)$.  The proof itself says that the thin cut decomposes the graph into an $(x_I,-y)$-graph, a $(y,z)$-graph, and a $(z,x_{I^c})$-graph; see the paragraph immediately before equation (3.21).
+
+The analogous corrected formulas should be
+\begin{align}
+   g_1&=\frac{\alpha_1(r-1)+2-\ellp(x_I)-\ellp(y)}{2},\\
+   g_2&=\frac{\alpha_2(r-1)+2-\ellp(y)-\ellp(z)}{2},\\
+   g_3&=\frac{\alpha_3(r-1)+2-\ellp(z)-\ellp(x_{I^c})}{2}.
+\end{align}
+
+As a sanity check, for $r=2$, $\alpha_1=1$, and a trivalent genus-zero component, the printed formula can produce a half-integer genus, whereas \eqref{eq:g1-correct} gives the expected genus.
+
+\subsection{The sign in equation (3.20) appears to be a typo}
+
+The theorem itself uses the sign $(-1)^{\alpha_2}$ in equation (3.17).  The proof, however, states in equation (3.20) that
+\[
+   (-1)^{\alpha_3}\binom{s}{\alpha_1,\alpha_2,\alpha_3}
+   =\sum_{E\in P(T)}(-1)^{r(E)-1}
+     \binom{s}{\alpha_1,s_1,\ldots,s_{r(E)-1},\alpha_3}.
+\]
+This is inconsistent with the theorem as printed.
+
+Redoing the inclusion--exclusion calculation gives $(-1)^{\alpha_2}$, not $(-1)^{\alpha_3}$.  For a fixed thin cut, the cuts containing it correspond to ordered decompositions
+\[
+   \alpha_2=s_1+\cdots+s_m,
+   \qquad s_i>0.
+\]
+The relevant sum is
+\[
+   \sum_{m\geq 0}(-1)^m
+   \sum_{s_1+\cdots+s_m=\alpha_2}
+   \binom{s}{\alpha_1,s_1,\ldots,s_m,\alpha_3}.
+\]
+Factoring out $s!/(\alpha_1!\alpha_3!)$ and using
+\[
+   \sum_{m\geq 0}(-1)^m(e^t-1)^m=e^{-t},
+\]
+the coefficient of $t^{\alpha_2}$ is $(-1)^{\alpha_2}/\alpha_2!$.  Therefore the identity should be
+\begin{equation}\label{eq:correct-3-20}
+   \sum_{E\in P(T)}(-1)^{r(E)-1}
+     \binom{s}{\alpha_1,s_1,\ldots,s_{r(E)-1},\alpha_3}
+   =(-1)^{\alpha_2}\binom{s}{\alpha_1,\alpha_2,\alpha_3}.
+\end{equation}
+Thus the theorem's sign appears to be correct, while equation (3.20) in the proof should be changed.
+
+\subsection*{Suggested correction}
+Revise the displayed genus formulas in Theorem 3.12 as above, and replace equation (3.20) by \eqref{eq:correct-3-20}.
+
+\section{Example 6.15: missing factor $1/r$ in $y(z)$}
+
+\subsection*{Location}
+Corollary 6.13 and Example 6.15, p. 37, equations (6.33)--(6.35).
+
+\subsection*{Issue}
+Corollary 6.13 states that for fixed leakiness
+\[
+   y(z)=S(z)+k\,\bar w(S(z))z^k.
+\]
+In Example 6.15, for $r$-completed cycles, the paper sets
+\[
+   w(j)=\hbar^{r-1}\frac{j^r}{r}.
+\]
+Hence
+\[
+   w\left(\frac{s}{\hbar},\hbar\right)=\frac{s^r}{r\hbar},
+   \qquad
+   \bar w(s)=\frac{s^r}{r}.
+\]
+Substituting into Corollary 6.13 gives
+\begin{equation}\label{eq:y-correct}
+   y(z)=S(z)+\frac{k}{r}S(z)^r z^k.
+\end{equation}
+However, equation (6.35) prints
+\[
+   y(z)=S(z)+kS(z)^r z^k,
+\]
+missing the factor $1/r$.
+
+This correction is also forced by the earlier parametrization in equations (4.41)--(4.42).  For $S(z)=z^q$, those equations give
+\[
+   X=z\left(1+\frac{k}{r}z^{q(r-1)+k}\right)^{-r/k},
+   \qquad
+   Y=z^{q-1}\left(1+\frac{k}{r}z^{q(r-1)+k}\right)^{(r+k)/k}.
+\]
+Thus
+\[
+   XY=z^q\left(1+\frac{k}{r}z^{q(r-1)+k}\right),
+\]
+which agrees with \eqref{eq:y-correct}, not with the printed formula.
+
+\subsection*{Suggested correction}
+Replace the second line of equation (6.35) by
+\[
+   y(z)=S(z)+\frac{k}{r}S(z)^r z^k.
+\]
+The first line for $X(z)$ in (6.35) is consistent with this correction.
+
+\section{The operator $M_k$: inconsistent coefficient}
+
+\subsection*{Location}
+Theorem 2.8 and Remark 2.9, p. 9, compared with Example 7.7, p. 39.
+
+\subsection*{Issue}
+Theorem 2.8 defines
+\[
+   M_k=F^k_2-\frac{k^2}{24}J_{-k}.
+\]
+Remark 2.9 then explicitly says that an earlier version of the relevant result was missing a summand $-\frac{1}{24}J_{-k}$.
+
+But Example 7.7 states
+\[
+   \hbar M_k=\hbar\left(F^k_2-\frac{k^2-1}{24}F^k_0\right).
+\]
+Since Definition 2.6 states that $F^k_0=J_{-k}$, the coefficient in Example 7.7 is
+\[
+   -\frac{k^2-1}{24}J_{-k},
+\]
+which differs from Theorem 2.8 by $+\frac{1}{24}J_{-k}$.  This is exactly the discrepancy described in Remark 2.9.
+
+\subsection*{Suggested correction}
+In Example 7.7, replace
+\[
+   F^k_2-\frac{k^2-1}{24}F^k_0
+\]
+by
+\[
+   F^k_2-\frac{k^2}{24}F^k_0.
+\]
+The conclusion of Example 7.7--that the original leaky Hurwitz operator has a genuine $\hbar$-correction and is not covered by Theorem 7.1--appears to remain valid after this correction.
+
+\section{Smaller notation and convention errors}
+
+\subsection{Definition 3.1}
+
+\subsubsection*{Location}
+Definition 3.1, p. 19.
+
+\subsubsection*{Issue and correction}
+The definition begins with ``$x\in\Z\setminus\{0\}$'', but then uses $x_1,\ldots,x_n$ and $n$ leaves.  This should be
+\[
+   x\in(\Z\setminus\{0\})^n.
+\]
+The same definition says that a leaky tropical cover is $k$-compatible if the vertex ordering is exactly
+\[
+   v_1<\cdots<v_n.
+\]
+However, the internal vertices are $v_1,\ldots,v_s$, while $n$ is the number of leaves/ends.  This should be
+\[
+   v_1<\cdots<v_s.
+\]
+
+\subsection{Connected/disconnected superscript convention}
+
+\subsubsection*{Location}
+Definition 2.1, p. 6, and the Gromov--Witten paragraph after equation (2.12), p. 7.
+
+\subsubsection*{Issue and correction}
+Definition 2.1 uses $\bullet$ for not-necessarily connected Hurwitz numbers and $\circ$ for connected Hurwitz numbers.  The paragraph after equation (2.12) reverses this convention, saying that connected stable maps get a superscript $\bullet$ and possibly disconnected stable maps get $\circ$.
+
+This sentence should be swapped to match Definition 2.1:
+\begin{quote}
+When we restrict to connected stable maps, we add a superscript $\circ$; for possibly disconnected stable maps, we add $\bullet$.
+\end{quote}
+
+\subsection{Example 4.8 superscripts}
+
+\subsubsection*{Location}
+Example 4.8, p. 28, equations (4.48)--(4.56).
+
+\subsubsection*{Issue and correction}
+The example states that it considers
+\[
+   (k,r,q)=(1,2,1).
+\]
+However, the resulting closed formulas are labelled
+\[
+   lh^{1,1,1}_{0,(\cdots)}.
+\]
+The superscripts should be
+\[
+   lh^{1,2,1}_{0,(\cdots)}.
+\]
+
+\section{Proposition 6.8: formulation gap for the $n=1$ case}
+
+\subsection*{Location}
+Proposition 6.8, p. 36, equation (6.20), and the definition of $T$ in equation (6.21).  Compare with Proposition 6.7 on pp. 35--36 and Example 2.35 on p. 17.
+
+\subsection*{Issue}
+Equation (6.21) defines $T$ for a formal series $f(u,z)$ in nonnegative powers of $u$:
+\[
+   T f(z)=\sum_{j,t\geq 0}\left(-d\frac{1}{dx}\right)^j[v^j]L_t(-v,z,s,\hbar)[u^t]f(u,z).
+\]
+But Example 2.35 gives, for $n=1$,
+\[
+   W^{S_0}_1(z,u)
+   =\frac{dz}{z\,\varsigma(u\hbar)}
+     \exp\left(u(S(u\hbar z\partial_z)-1)S(z)\right),
+\]
+so
+\[
+   \frac{1}{\varsigma(u\hbar)}=\frac{1}{u\hbar}+O(u).
+\]
+Thus $W^{S_0}_1(z,u)$ has a pole in $u$ and is not a formal power series in nonnegative powers of $u$.
+
+The paper is aware of this issue: the paragraph before Proposition 6.7 says that the $n=1$ case requires extra care because of the pole in $u$, and Proposition 6.7 splits off the polar contribution, producing the additional integral term.  The compact formula in Proposition 6.8 is therefore not quite well-typed as written unless $T W^{S_0}_1$ is interpreted through the regularization of Proposition 6.7.
+
+\subsection*{Suggested correction}
+Add an explicit convention to Proposition 6.8.  For example:
+\begin{quote}
+For $n=1$, the expression $T W^{S_0}_1$ is understood after subtracting the polar part $dz/(z u\hbar)$, with the polar contribution accounted for by the additional integral term in equation (6.20).
+\end{quote}
+Alternatively, state Proposition 6.8 separately for $n\geq 2$ and then give the regularized $n=1$ formula immediately afterwards.
+
+\section*{Concluding recommendation}
+
+The main results may well survive these corrections, but several of the displayed formulas currently conflict with each other.  The most important edits are:
+\begin{enumerate}[label=(\roman*)]
+   \item correct the Riemann--Hurwitz condition and normalization in Definition 2.2;
+   \item replace the Heisenberg relation (2.19);
+   \item correct the $f_{(2)}=p_2$ sentence;
+   \item repair the genus/profile formulas in Theorem 3.12 and the sign typo in (3.20);
+   \item insert the missing factor $1/r$ in Example 6.15;
+   \item make Example 7.7 consistent with Theorem 2.8 and Remark 2.9;
+   \item clarify the $n=1$ interpretation of Proposition 6.8.
+\end{enumerate}
+
+\section{Overall assessment}\label{sec:assessment}
+
+The main idea of the paper is still correct, but the manuscript is not correct as printed.  The errors identified above mostly affect normalisation, the statements of certain examples, and one wall-crossing formula.  They do not appear to destroy the central mechanism: leaky cut-and-join operators give a tropical model; fixed-leakiness operators dequantise to a Hamiltonian flow; that flow produces the spectral curve; and under the stated ``no quantum correction'' hypothesis, the resulting multidifferentials satisfy topological recursion.
+
+\subsection*{What survives}
+
+\paragraph{1.\ The working leaky theory uses the correct Riemann--Hurwitz condition.}
+The dangerous-looking error is Definition 2.2, where the non-leaky completed-cycle background uses $\sum_i r_i$ and asserts $f_{(2)}=p_2$.  That part is wrong.  However, the later actual leaky completed-cycle definition and the tropical theorem use
+\[
+   \sum_i (r_i-1) = 2g-2+\ellp(\mu)+\ellp(\nu),
+\]
+and the local vertex condition
+\[
+   r_i - 1 = 2g(v_i) - 2 + \operatorname{val}(v_i).
+\]
+These are exactly the formulas needed for the tropical arguments in Sections 2.4 and~3.  Theorem 2.25 and its Euler-characteristic proof are internally consistent with the corrected condition.
+
+Thus the error in Definition 2.2 is serious for exposition and for the claim ``this recovers classical completed cycles,'' but it does not infect the main tropical development, since Sections 2.4--3 already use the correct $(r_i-1)$-condition.
+
+\paragraph{2.\ Piecewise polynomiality is structurally sound.}
+The proof of Theorem 3.10 relies on three ingredients:
+\begin{itemize}
+   \item fixed graph contribution is polynomial in the edge flows,
+   \item summation over lattice points in fixed-topology flow polytopes is polynomial,
+   \item the topology changes only when a leaky resonance wall is crossed.
+\end{itemize}
+The degree computation
+\[
+   |E^0(\Gamma)| + 2\sum_v g(v) = s - 1 + g + \sum_v g(v),
+\]
+together with $h^1(\Gamma)=g-\sum_v g(v)$, gives total degree
+\[
+   s - 1 + 2g = 1 + \sum_i r_i - n,
+\]
+using $\sum_i(r_i-1) = 2g-2+n$.  This argument is consistent, so Theorem~3.10's main claim survives.
+
+\paragraph{3.\ The cubic wall-crossing idea survives, but Theorem 3.12 needs correction.}
+The wall-crossing mechanism is still right: crossing a wall corresponds to cutting a monodromy graph, and after inclusion--exclusion a ``thin cut'' decomposes the graph into three pieces, producing a cubic expression in smaller leaky Hurwitz numbers.  That mechanism is exactly the one described before Theorem~3.12.
+
+However, the printed formula in Theorem 3.12 is not correct as written.  The sign $(-1)^{\alpha_2}$ is likely correct, but the proof's equation (3.20) has the wrong sign.  More importantly, the genus/profile formulas must be corrected.  Instead of the printed
+\[
+   g_1 = \frac{\alpha_1 r + 2 - \ellp(x_I,-z)}{2},
+\]
+the first component should satisfy
+\[
+   \boxed{\;g_1 = \frac{\alpha_1(r-1) + 2 - \ellp(x_I) - \ellp(y)}{2}\;}
+\]
+Similarly,
+\[
+   \boxed{\;g_2 = \frac{\alpha_2(r-1) + 2 - \ellp(y) - \ellp(z)}{2}\;}
+\]
+and
+\[
+   \boxed{\;g_3 = \frac{\alpha_3(r-1) + 2 - \ellp(z) - \ellp(x_{I^c})}{2}\;}
+\]
+With those repairs the cubic wall-crossing theorem looks mathematically plausible and consistent with the tropical cutting argument.  As printed, however, Theorem 3.12 is false because the genera can become non-integral or attached to the wrong profiles.
+
+\paragraph{4.\ The Hamiltonian-flow construction is still correct.}
+The Hamiltonian-flow construction is one of the strongest parts of the paper.  The setup in Section 5 starts from a general cut-and-join operator
+\[
+   W = \sum_{l\in\Z'}\sum_{k\ge 0} w_k\!\left(l+\tfrac{k}{2},\hbar\right) E_{l+k,l},
+\]
+then studies the adjoint flow $e^{-\operatorname{ad}_W} J(X)$.  The key dequantisation assumption is
+\[
+   W(z,s/\hbar,\hbar) = \hbar^{-1} w(z,s) + O(\hbar),
+\]
+which leads to the Hamiltonian vector field
+\[
+   V_w = (z\partial_z w)\partial_s - (\partial_s w)\,z\partial_z
+\]
+for the symplectic form $\Omega = \frac{dz}{z}\wedge ds$.  This derivation is independent of the bad statements in Definition 2.2 and independent of the typo in the Heisenberg relation, provided one uses the standard Heisenberg convention (which the bosonic model itself forces).  Section 5 is internally consistent at the level of the adjoint-flow recursion and the central term.
+
+Thus the conceptual chain
+\[
+   \text{cut-and-join operator} \;\rightsquigarrow\; \text{Hamiltonian flow} \;\rightsquigarrow\; \text{spectral curve}
+\]
+survives.
+
+\paragraph{5.\ The fixed-leakiness spectral curve is correct, but Example 6.15 is mis-substituted.}
+For fixed leakiness $k$, Section 6 obtains
+\[
+   X(z) = z\left(\frac{\bar w(S(z))}{\bar w\bigl(S(z) + k\bar w(S(z))z^k\bigr)}\right)^{1/k},
+   \qquad
+   y(z) = S(z) + k\bar w(S(z))\,z^k.
+\]
+This is correct: it follows directly from the explicit Hamiltonian flow
+\[
+   \Xi_\beta(z,s) = z\left(\frac{\bar w(s)}{\bar w\bigl(s + kz^k\beta\bar w(s)\bigr)}\right)^{1/k},
+   \qquad
+   \Upsilon_\beta(z,s) = s + kz^k\beta\bar w(s).
+\]
+For $r$-completed cycles $\bar w(s)=s^r/r$, the specialisation should therefore be
+\[
+   \boxed{\;X(z) = z\left(1 + \tfrac{k}{r}\,S(z)^{r-1} z^k\right)^{-r/k}\;}
+\]
+\[
+   \boxed{\;y(z) = S(z) + \tfrac{k}{r}\,S(z)^r z^k\;}
+\]
+Example 6.15 omits the factor $1/r$ in $y(z)$, but the general Corollary 6.13 is correct.  The main spectral-curve construction survives; only the example needs correction.
+
+\paragraph{6.\ The topological-recursion theorem survives in its intended scope.}
+Theorem 7.1 states that for fixed leakiness and a cut-and-join operator satisfying
+\[
+   w(s/\hbar,\hbar) = \hbar^{-1}\bar w(s)
+\]
+with rational $\bar w$ and rational $S(z)$, the completed multidifferentials are produced by topological recursion on the spectral curve from Corollary 6.13.  Corollary 7.3 extends this by a limiting argument to rational $\bar w, S$ when $dx$ has simple zeroes and poles.
+
+The errors identified above do not break that theorem.  The proof in Section 7 uses the general spectral curve (6.33), not the erroneous $y$-formula in Example 6.15.  For completed cycles the corrected specialisation is simply $\bar w(s) = s^r/r$, so the theorem applies with the corrected $y$-coordinate above.
+
+The caveat is important: Theorem 7.1 applies only to operators with no higher $\hbar$-corrections beyond the leading dequantisation.  It does not apply to the original CMR25 leaky operator $M_k$, and the paper itself says this in Example 7.7.  The coefficient in Example 7.7 is inconsistent, but the conclusion remains: the original $M_k$-theory has a quantum correction and should not be expected to satisfy ordinary topological recursion from just the genus-zero spectral curve.
+
+\subsection*{What does not survive as printed}
+
+The following items should not be defended as merely cosmetic.
+
+\begin{enumerate}[label=(\alph*)]
+   \item In Definition 2.2, the condition
+   \[
+      \sum_i r_i = 2g - 2 + \ellp(\mu) + \ellp(\nu)
+   \]
+   must be replaced by
+   \[
+      \sum_i (r_i - 1) = 2g - 2 + \ellp(\mu) + \ellp(\nu).
+   \]
+
+   \item The statement $f_{(2)} = p_2$ is false in the paper's normalisation; it should read $f_{(2)} = p_2/2$, or the normalisation of $p_2$ must be changed.
+
+   \item The Heisenberg relation should be
+   \[
+      [J_m, J_n] = m\,\delta_{m+n,0}\,c,
+   \]
+   not $n\,\delta_{m,n}\,c$.  The bosonic action $J_k \mapsto k\partial_{p_k}$, $J_{-k} \mapsto p_k$ forces this correction.
+
+   \item Theorem 3.12's wall-crossing formula needs corrected genera and profiles, and equation (3.20) in the proof needs the sign fixed.
+
+   \item Example 6.15 must include the missing factor $1/r$ in $y(z)$.
+
+   \item Example 7.7 should use the same $M_k$ coefficient as Theorem 2.8, namely $k^2/24$, not $(k^2-1)/24$, if the paper keeps Theorem 2.8 as stated.
+
+   \item Proposition 6.8 should explicitly regularise the $n=1$ pole in $W^{S_0}_1$.  The Section 7 treatment indicates the intended formula is salvageable, but the statement should be made precise.
+\end{enumerate}
+
+\subsection*{Bottom line for the author-facing message}
+
+I would \emph{not} claim that the main result is wrong.  The central framework appears sound after correction: the tropical polynomiality theorem, the cubic wall-crossing mechanism, the Hamiltonian-flow construction of spectral curves, and the fixed-leakiness topological-recursion theorem all appear to survive.  However, the paper needs substantial corrections in the Section 2 normalisations, in Theorem 3.12, in Example 6.15, in Example 7.7, and in the formulation of Proposition 6.8.
+
+The most delicate issue is the phrase ``completed cycles.''  The paper should make very clear which normalisation of completed cycles is being used.  If the authors intend to recover the usual Okounkov--Pandharipande completed cycles at $k=0$, the current Section 2 normalisation statements are not adequate.  If instead they define a closely related Fock-space-normalised family, then the main theory is still coherent, but the comparison with classical completed cycles must be rewritten.
+
+\end{document}
