@@ -132,13 +132,13 @@ citecolor=purple,filecolor=magenta,urlcolor=cyan]{hyperref}
 
 \title[Failing to keep the balance]{Failing to keep the balance: explicit formulae and topological recursion for leaky Hurwitz numbers}
 \author{Marvin Anas Hahn and Reinier Kramer}
-\date{}
+\date{\small Reviewed and corrected version prepared by Dennj Osele}
 
 \subjclass[2020]{Primary 14N10, 14H30; Secondary 14N35, 14H70, 14T90, 05A15, 05E05}
 \keywords{Hurwitz numbers, tropical geometry, KP hierarchy, topological recursion}
 
 \begin{abstract}
-    Recently a new family of enumerative invariants called \emph{leaky Hurwitz numbers} was introduced in the context of logarithmic intersection theory \cite{CMR25}. They admit an interpretation via tropical covers where the balancing condition fails. We employ tropical geometry to prove a generalisation of the piecewise polynomiality of \cite{AKL25} for leaky completed cycles Hurwitz numbers, and a different wall crossing that is cubic instead of quadratic. Using tropical combinatorics and generatingfunctionology, we also find closed formulae for one--part and two--part completed cycles leaky Hurwitz numbers in genus $0$. Working more generally with a view towards topological recursion, we use Hamiltonian flows to associate spectral curves to very general cut--and--join operators. Under mild analytic constraints, we find the appropriate spectral curves, and in case the leakiness is fixed, we show that the resulting enumerative invariants satisfy topological recursion. This provides a partial inverse to recent work of Alexandrov--Bychkov--Dunin-Barkowski--Kazarian--Shadrin \cite{ABDKS24a} producing differentials satisfying topological recursion for KP $\tau$-functions. In particular these results specialise to completed cycles leaky Hurwitz numbers.
+    Recently a new family of enumerative invariants called \emph{leaky Hurwitz numbers} was introduced in the context of logarithmic intersection theory \cite{CMR25}. They admit an interpretation via tropical covers where the balancing condition fails. We employ tropical geometry to prove a generalisation of the piecewise polynomiality of \cite{AKL25} for leaky completed cycles Hurwitz numbers, and a different wall crossing that is cubic instead of quadratic. Using tropical combinatorics and generatingfunctionology, we also find closed formulae for one--part and two--part completed cycles leaky Hurwitz numbers in genus $0$. Working more generally with a view towards topological recursion, we use Hamiltonian flows to associate spectral curves to very general cut--and--join operators. Under mild analytic constraints, we find the appropriate spectral curves, and in case the leakiness is fixed, we show that the resulting enumerative invariants satisfy topological recursion. This provides a partial inverse to recent work of Alexandrov--Bychkov--Dunin-Barkowski--Kazarian--Shadrin \cite{ABDKS24a} producing differentials satisfying topological recursion for KP $\tau$-functions. In particular these results specialise to completed cycles leaky Hurwitz numbers in the regular cases, and to further cases by the stated limiting arguments.
     \end{abstract}
 
 \maketitle
@@ -183,9 +183,9 @@ This gives a natural interpretation of the symplectic structure of topological r
 
 Our methods show how vertex operators, i.e. the group action generating the space of KP $ \tau $-functions, act on the space of spectral curves (of genus $0$) in a natural way. This is a partial converse to the results of \cite{ABDKS24KP0}: while they find $\tau$-functions from spectral curves through topological recursion, we generate spectral curves, and hence the genus-$0$ sector of topological recursion, from $\tau$-functions.
 
-The procedure described above loses information, as it only keeps the leading order in $\hbar$. However, the Hurwitz numbers, and hence their associated multidifferentials, depend on the entire $ \hbar$-series. As topological recursion uniquely reconstructs multicorrelators from the spectral curve, there is at most one cut-and-join operator with given dequantisation whose Hurwitz numbers can be found trough topological recursion.
+The procedure described above loses information, as it only keeps the leading order in $\hbar$. However, the Hurwitz numbers, and hence their associated multidifferentials, depend on the entire $ \hbar$-series. As topological recursion uniquely reconstructs multicorrelators from the spectral curve, there is at most one cut-and-join operator with given dequantisation whose Hurwitz numbers can be found through topological recursion.
 
-For a fixed positive leakiness, i.e. a cut-and-join operator with a single non-zero diagonal below the main diagonal, we write the spectral curve explicitly, and we show that topological recursion generically holds if the operator coincides with its leading order, in terms of quantisation. The most natural class of examples, with the cut-and-join operator a leaky completed cycles operator and the secondary point an orbifold ramification, all fall in this generic class. This is compatible with the $ k \to 0$ limit, even though in this case the usual generating series, the symplectic duality function $ \hat{\psi}$, does have non-trivial $\hbar$-corrections: our generating series is different, and we claim more natural.\par
+For a fixed positive leakiness, i.e. a cut-and-join operator with a single non-zero diagonal below the main diagonal, we write the spectral curve explicitly, and we show that topological recursion generically holds if the operator coincides with its leading order, in terms of quantisation. The leaky completed cycles examples with orbifold secondary ramification are covered directly in the regular cases and otherwise require the limiting arguments discussed later. This is compatible with the $ k \to 0$ limit, even though in this case the usual generating series, the symplectic duality function $ \hat{\psi}$, does have non-trivial $\hbar$-corrections: our generating series is different, and we claim more natural.\par
 Our proof for topological recursion hinges on the exact shape of the spectral curves we obtain, as we can construct these through a series of successive $x$--$y$ dualities and symplectic dualities.
 
 % While this generalisation loses the geometric intuition of counting covers of $ \P^1$, as the degree is not even constant anymore, it turns out to be very natural from the integrability perspective. The KP hierarchy is an infinite series of partial differential equations in infinitely many variables, whose solution space is a semi-infinite Grassmannian \cite{SS83}, and as such has a natural action of an infinite general linear group, given by vertex operators. All equations in this hierarchy have terms with at least two derivatives, so linear functions are trivial solutions. The usual, non-leaky Hurwitz numbers can be obtained from such trivial solutions by action of diagonal elements, called cut-and-join operators. Leaky Hurwitz numbers, on the other hand, have \emph{non-diagonal} cut-and-join operators; and more specifically the `leakiness' is the distance from the diagonal of the cut-and-join operator. While \cite{CMR25} considered only a very particular subset of cut-and-join operators coming from their log double ramification analysis, from the point of view of combinatorics and integrability there is no reason for such a restriction \cite{AKL25}.
@@ -206,7 +206,7 @@ Our proof for topological recursion hinges on the exact shape of the spectral cu
 
 \subsection{Future work}
 
-In this work, we explore a new, but very natural, extension of Hurwitz numbers, particularly in connection with tropical geometry, integrability, and topological recursion. We have found that this extension yields new insights in these connections, that also shed light on the previously establishes relations. However, we do not prove these extended connections in full generality, and we also do not address certain other commonly related topics.
+In this work, we explore a new, but very natural, extension of Hurwitz numbers, particularly in connection with tropical geometry, integrability, and topological recursion. We have found that this extension yields new insights in these connections, that also shed light on the previously established relations. However, we do not prove these extended connections in full generality, and we also do not address certain other commonly related topics.
 
 As such, we leave many open questions, including the following.
 
@@ -234,7 +234,7 @@ In \cref{CJSection}, we use the Fock space formalism to interpret the cut-and-jo
 
 \Cref{ExplicitSection} consist of two parts: in \cref{ExplicitMultidifferentials}, we generalise the work of \cite{BDKS22} to give explicit closed algebraic formulas for multidifferentials of leaky Hurwitz numbers, in \cref{LeakyMultidifferentials}. This section hardly contains any proofs, as nearly all proofs generalise directly from \cite{BDKS22}. Then, in \cref{CurvesForFixedk} we restrict to a fixed leakiness to write down the spectral curve explicitly in terms of the given generating functions for the problem, \cref{SpectralCurveShape}.
 
-Finally, in \cref{sec:TR} we show that, still for fixed $k >0$, the multidifferential generating series of Hurwitz numbers are calculated by topological recursion on the spectral curves found before if the cut-and-join generating function coincides with its dequantisation, and both this and the secondary ramification generating series are rational \cref{LeakyTRThm,LeakyTRLimit}, at least generically. This generic situations contains all `monomial' cases: a leaky cut-and-join operator with an orbifold secondary ramification.
+Finally, in \cref{sec:TR} we show that, still for fixed $k >0$, the completed multidifferential generating series of Hurwitz numbers are calculated by topological recursion on the spectral curves found before if the cut-and-join generating function coincides with its dequantisation, and both this and the secondary ramification generating series are rational \cref{LeakyTRThm,LeakyTRLimit}, at least generically. This generic situation contains the monomial cases satisfying the stated regularity hypotheses; the ramified orbifold cases require an additional limiting argument.
 The proof identifies the spectral curve as generated by a series of four $ x$--$y$ swaps and three symplectic dualities, and shows the multidifferentials obtained from this series of operations coincide with the Hurwitz generating series.
 
 \subsection{Acknowledgments}
@@ -248,7 +248,7 @@ R.K. acknowledges support from the National Science and Engineering Research Cou
 
 \subsection{Notation}
 
-We will use the notation $ \llbracket n \rrbracket \coloneqq \{ 1, \dotsc, n\}$, and let this thread as index, e.g. $ X_{\llbracket n \rrbracket} = \{ X_1, \dotsc, X_n \}$.
+We will use the notation $ \llbracket n \rrbracket \coloneqq \{ 1, \dotsc, n\}$, and treat this as an index, e.g. $ X_{\llbracket n \rrbracket} = \{ X_1, \dotsc, X_n \}$.
 
 We also define the functions
 \begin{equation}
@@ -294,7 +294,7 @@ If $|\mu|<|\lambda|$, there is a natural inclusion $S_{|\mu|}\subset S_{|\lambda
  \end{equation}
 
 \subsection{(Leaky) Hurwitz numbers}
-We begin with the definition of the ring of shifted symmetric functions. Let $n$ be a positiver integer. We define an action of $S_n$ on $\mathbb{Q}[\lambda_1,\dots,\lambda_n]$ by permutation of the shifted variables $\lambda_i-i$. We denote the ring of invariants by
+We begin with the definition of the ring of shifted symmetric functions. Let $n$ be a positive integer. We define an action of $S_n$ on $\mathbb{Q}[\lambda_1,\dots,\lambda_n]$ by permutation of the shifted variables $\lambda_i-i$. We denote the ring of invariants by
 
 \begin{equation}
     \mathbb{Q}[\lambda_1,\dots,\lambda_n]^{(S_n)}.
@@ -339,23 +339,23 @@ Hurwitz numbers are closely related to the representation theory of the symmetri
 \begin{equation}
     h^\bullet_{g;\mu,\nu}
     =
-    \frac{1}{\prod \mu_i\prod\nu_j} \sum_{\lambda\vdash d} \chi_\lambda(\mu) \chi_\lambda(\nu) f_{(2)}(\lambda)^r.
+    \frac{1}{\prod \mu_i\prod\nu_j} \sum_{\lambda\vdash d} \chi_\lambda(\mu) \chi_\lambda(\nu) f_{(2)}(\lambda)^b.
 \end{equation}
 
-This motivates the definition of completed cycles Hurwitz numbers of \cite{OP06a}.
+This motivates the following normalisation of completed cycles Hurwitz numbers.
 
 \begin{definition}\label{CCHNdef}
-    Let $g\ge0$, $d>0$ integers and $\mu,\nu$ partitions of $d$. Further, let $r_1,\dots,r_n$ be positive integers with $\sum r_i=2g-2+\ell(\mu)+\ell(\nu)$ and denote $\underline{r}=(r_1,\dots,r_n)$. Then, we define completed cycles double Hurwitz numbers
+    Let $g\ge0$, $d>0$ integers and $\mu,\nu$ partitions of $d$. Further, let $r_1,\dots,r_n$ be positive integers with $\sum (r_i-1)=2g-2+\ell(\mu)+\ell(\nu)$ and denote $\underline{r}=(r_1,\dots,r_n)$. Then, we define completed cycles double Hurwitz numbers
 
     \begin{equation}
         h^{\underline{r},\bullet}_{g;\mu,\nu}
         =
-        \frac{1}{\prod \mu_i\prod\nu_j} \sum_{\lambda\vdash d} \chi_\lambda(\mu) \chi_\lambda(\nu) \prod_{i=1}^n \frac{p_{r_i}}{(r_i-1)!}.
+        \frac{1}{\prod \mu_i\prod\nu_j} \sum_{\lambda\vdash d} \chi_\lambda(\mu) \chi_\lambda(\nu) \prod_{i=1}^n \frac{p_{r_i}}{r_i}.
     \end{equation}
-    Via the inclusion-exclusion principle, we obtain connected completed cycles double Hurwitz numbers $H_g^{\underline{r},\circ}$.
+    Via the inclusion-exclusion principle, we obtain connected completed cycles double Hurwitz numbers $h_g^{\underline{r},\circ}$.
 \end{definition}
 
-We have $H_g^{(2^n)}(\mu,\nu) = H_g(\mu,\nu)$, since $f_{(2)}=p_2$ by the Frobenius character formula, i.e. completed cycles Hurwitz numbers do recover the classical definition. For $r_i \ge 3 $ completed cycles Hurwitz numbers are still related to classical Hurwitz numbers where we require the ramification profile of $q_i$ to be $(r_i,1\dots,1)$, although there are additional contributions. The shifted symmetric functions $p_i$ ``complete" the corresponding central characters $f_{(i)}$ in this sense. In seminal work \cite{OP06a}, Okounkov and Pandharipande gave a natural interpretation of completed cycles Hurwitz numbers in Gromov--Witten theory.
+We have $h_g^{(2^n)}(\mu,\nu) = h_g(\mu,\nu)$, since $f_{(2)}=p_2/2$ by the Frobenius character formula, i.e. completed cycles Hurwitz numbers do recover the classical definition. For $r_i \ge 3 $ completed cycles Hurwitz numbers are still related to classical Hurwitz numbers where we require the ramification profile of $q_i$ to be $(r_i,1\dots,1)$, although there are additional contributions. The shifted symmetric functions $p_i$ ``complete" the corresponding central characters $f_{(i)}$ in this sense. In seminal work \cite{OP06a}, Okounkov and Pandharipande gave a natural interpretation of completed cycles Hurwitz numbers in Gromov--Witten theory.
 
 We describe the set-up briefly and refer to \cite{OP06a} for details. Fix two partitions $\mu$ and $\nu$ of a positive integer $d$. Let $\overline{\mathcal{M}}_{g,n}(\mathbb{P}^1,\mu,\nu)$ be the moduli space of relative stable maps to $\mathbb{P}^1$ with ramification $\mu$ over $0$ and $\nu$ over $\infty$. We define for $i\in[n]$ the corresponding $\psi$--class
 \begin{equation}
@@ -372,7 +372,7 @@ where $\mathbb{L}_i$ is the $i$-th cotangent bundle on $\overline{\mathcal{M}}_{
     \int_{[\overline{\mathcal{M}}_{g,n}(\mathbb{P}^1,\mu,\nu)]^{\textrm{vir}}}\prod_{i=1}^n\mathrm{ev}_i^\ast(\omega)\psi_i^{r_i}.
 \end{equation}
 
-When we restrict to connected stable maps, we add a superscript $\bullet$, where for possibly disconnected stable maps, we add $\circ$.
+When we restrict to connected stable maps, we add a superscript $\circ$, whereas for possibly disconnected stable maps, we add $\bullet$.
 
 We have the following theorem, which is an incarnation for Gromov--Witten/Hurwitz correspondence of \cite{OP06a}.
 
@@ -381,7 +381,7 @@ We have the following theorem, which is an incarnation for Gromov--Witten/Hurwit
     \begin{equation}
         h^{\underline{r},\bullet}_{g;\mu,\nu}
         =
-        \left\langle\mu\mid \tau_{r_1-1}(\omega)\cdots\tau_{r_n-1}(\omega)\mid\nu\right\rangle_{g,n}^{\mathbb{P}^1}.
+        \left(\prod_{i=1}^n(r_i-1)!\right)\left\langle\mu\mid \tau_{r_1-1}(\omega)\cdots\tau_{r_n-1}(\omega)\mid\nu\right\rangle_{g,n}^{\mathbb{P}^1}.
     \end{equation}
 \end{theorem}
 
@@ -402,7 +402,7 @@ Note that for $k=0$ the condition becomes that $\mathcal{O}\left(\sum_{i=1}^n\ma
 
 While it seems natural that double Hurwitz numbers should appear as an intersection product of $\mathrm{DR}_g(\mathbf{x})$ with a natural class on $\overline{\mathcal{M}}_{g,n}$, there is no obvious way to do so. In a series of works in recent years \cite{Hol21,MW20}, this failure to express double Hurwitz numbers has been identified to emerge from $\mathrm{DR}_g(\mathbf{x})$ ``living in the wrong space". This insight motivated the introduction of the \textit{logarithmic double ramification cycle} $\mathrm{logDR}_g(\mathbf{x})$ obtained via a limit of pull-backs of iterated smooth log-blowups of $\overline{\mathcal{M}}_{g,n}$.
 
-It was proved in \cite{CMR25} that double Hurwitz numbers $H_g(\mu,\nu)$ may be indeed obtained as an intersection product with $\mathrm{logDR}_g(\mu,-\nu)$ for $k=0$. Moreover, the same construction provides a whole new family of enumerative invariants $H_g^k(\mu,\nu)$ for arbitrary integers $k$ called \textit{leaky Hurwitz numbers}. We give equivalent definitions first via the Fock space formalism in \cref{FockSpace} and in terms of tropical geometry in \cref{sec-tropcov}.
+It was proved in \cite{CMR25} that double Hurwitz numbers $H_g(\mu,\nu)$ may be indeed obtained as an intersection product with $\mathrm{logDR}_g(\mu,-\nu)$ for $k=0$. Moreover, the same construction provides a whole new family of enumerative invariants $H_g^k(\mu,\nu)$ for non-negative integers $k$ called \textit{leaky Hurwitz numbers}. We give equivalent definitions first via the Fock space formalism in \cref{FockSpace} and in terms of tropical geometry in \cref{sec-tropcov}.
 
 
 
@@ -433,8 +433,9 @@ and $c$ central. The algebra $ \widehat{\mf{a}}_\infty$ includes the following o
     =
     \sum_{l\in\mathbb{Z}'}e^{u(l-n/2)}E_{l-n,l}+\frac{\delta_{n,0}}{\varsigma(u)} c 
     \in
-    \widehat{\mf{a}}_\infty \llbracket u \rrbracket .
+    \widehat{\mf{a}}_\infty ((u)) .
 \end{equation}
+For $n\ne0$, we have $\mathcal{E}_n(u)\in\widehat{\mf{a}}_\infty\llbracket u\rrbracket$.
 We recall their well-known commutators
 \begin{equation}
     [\mathcal{E}_m(u),\mathcal{E}_n(v)]
@@ -448,7 +449,7 @@ In particular, the specialisations $ J_n = \mathcal{E}_n(0)$ (for $ n \neq 0$) w
 \begin{equation}
     [J_m , J_n]
     =
-    n \delta_{m,n} c
+    m \delta_{m+n,0} c
 \end{equation}
 form the \emph{Heisenberg algebra}.
 
@@ -574,13 +575,18 @@ We also consider the \emph{bosonic current}
     \begin{equation}\label{LeakyCompletedOperator}
         \mathcal{E}_{-k} (u)
         =
-        \sum_{r=0}^\infty\mathcal{F}^k_r\frac{u^r}{r!}.
+        \sum_{r=0}^\infty\mathcal{F}^k_r\frac{u^r}{r!}
+        \quad (k\ne0),
+        \qquad
+        \mathcal{E}_{0} (u) - \frac{c}{u}
+        =
+        \sum_{r=0}^\infty\mathcal{F}^0_r\frac{u^r}{r!}.
     \end{equation}
     For $k = 0$, we write $ \mc{F}_r = \mc{F}_r^0$; these are the usual (non-leaky) $r$-completed cycles operators.\footnote{These are sometimes defined without the central term from $ \mc{E}_0$, but this only slightly changes the disconnected Hurwitz numbers, while the connected ones are unaffected.}
 \end{definition}
 
 The minus sign for $k $ on the left side of \cref{LeakyCompletedOperator} comes from the fact that \emph{positive} leakiness means that that something \emph{decreases}. 
-Note that $ \mc{F}_0^k = J_{-k}$.
+Note that $ \mc{F}_0^k = J_{-k}$ for $k\ne0$.
 
 The starting point of the relation between Fock space and integrability on the one hand and Hurwitz theory on the other hand, is the following result of Okounkov, confirming and extending a conjecture by Pandharipande \cite{Pan00}.
 
@@ -665,18 +671,18 @@ Cut-and-join operators in the literature are usually expressed in the following 
 	=
 	\sum_{l \in \Z'} \sum_{k \in \Z} w_k (l + \frac{k}{2}, \hbar)  E_{l + k,l} 
     =
-    \sum_{k \in Z} \sum_{r = 0}^\infty w_{k,r} (\hbar ) \mc{F}_r^k ,
+    \sum_{k \in \Z} \sum_{r = 0}^\infty w_{k,r} (\hbar ) \mc{F}_r^k ,
 \end{equation}
 where $ w_k (s, \hbar )  = \sum_r w_{k,r} (\hbar) s^r \in \hbar^{-1} \C \llbracket s, \hbar \rrbracket$.
 
 The exponent of $ \hbar $ is the negative of the Euler characteristic of the Riemann surfaces counted. Since the Euler characteristic is additive, this interpretation holds for any individual operator: the $ J_{\mu_i}$ and $ J_{-\nu_j}$ have an interpretation as caps and cups, i.e. both are topologically disks, and therefore require $ \hbar^{-1}$. The operators $ \mc{F}_2^k$ represent three-holed disks, and hence need $ \hbar^1$.
 
 \begin{example}\label{CCexample}
-    For fixed $k = 0$ and $r$, i.e. $W = \frac{\mc{F}_r^0}{r}$, \cref{DefLH} is related to \cref{CCHNdef} by
+    For fixed $k = 0$ and $r$, i.e. $W = \hbar^{r-1}\frac{\mc{F}_r^0}{r}$, \cref{DefLH} is related to \cref{CCHNdef} by
     \begin{equation}
         \lh^W_{g,\mu,\nu}
         =
-        \frac{h^{(r, \dotsc, r)}_{g;\mu, \nu}}{(2g-2+ l(\mu) + l(\nu))!}  .
+        \frac{h^{(r^s)}_{g;\mu, \nu}}{s!}, \qquad s(r-1)=2g-2+\ell(\mu)+\ell(\nu)  .
     \end{equation}
 \end{example}
 
@@ -727,6 +733,7 @@ In principle, we could work with the weaker assumption that $ w_k (\frac{s}{\hba
             \Big\< J(X_1) \dotsb J(X_n) e^W e^{\sum_{q=1}^\infty s_q \frac{J_{-q}}{q\hbar}} \Big\>^\circ.
         \end{split}
     \end{equation}
+    We write $\widehat{\omega}_n=\sum_g \hbar^{2g-2+n}\widehat{\omega}_{g,n}$.
 \end{definition}
 
 The (non-completed) multidifferentials are power series in the variables $ X_{\llbracket n \rrbracket}$ whose coefficients are Hurwitz numbers. On the other hand, the completed multidifferentials have better formal properties due to the entire current being present in the Fock space expression. They are very closely related, as the following proposition shows.
@@ -846,25 +853,25 @@ For target the tropical projective line, we now define the notion of leaky tropi
     \begin{equation}
         d_w^j=\sum_{\substack{e\in E(\Gamma)\colon,\, w\in\partial e\\\pi^{-1}((e_j)^\circ)\cap e\neq\emptyset}}\omega(e)
     \end{equation}
-    and define $k_w=d_w^1-d_w^2$. We call $k_w$ the \emph{leakyness} of $w$ and $\pi$ a \emph{leaky tropical cover} with leakyness $\underline{k}=(k_w)_{w\in V^0(\Gamma)}$.
+    and define $k_w=d_w^1-d_w^2$. We call $k_w$ the \emph{leakiness} of $w$ and $\pi$ a \emph{leaky tropical cover} with leakiness $\underline{k}=(k_w)_{w\in V^0(\Gamma)}$.
 
     The notions of ramification profiles and isomorphisms of \cref{def:tropcov} are adopted verbatim.
 \end{definition}
 
 
-A main feature of tropical covers it their use in computing vacuum expectations in the bosonic Fock space via Wick's theorem. For this, we consider the following set-up: Let $\mathbf{x}_1,\dots,\mathbf{x}_n$ be vectors of non-zero integers of any finite length with $\sum_{j=1}^{\ell(x_i)} (x_i)_j=k_i\in\mathbb{Z}$. We denote for $\mathbf{x}_i$ the vector only containing its positive (negative) entries by $\mathbf{x}_i^+$ (resp. $\mathbf{x}_i^-$). Moreover, consider vectors $\mathbf{x}_{-\infty} \in\mathbb{Z}_{>0}^m,\mathbf{x}_\infty \in \mathbb{Z}_{<0}^n$, then we aim to compute the following vacuum expectation:
+A main feature of tropical covers is their use in computing vacuum expectations in the bosonic Fock space via Wick's theorem. For this, we consider the following set-up: Let $\mathbf{x}_1,\dots,\mathbf{x}_n$ be vectors of non-zero integers of any finite length with $\sum_{j=1}^{\ell(\mathbf{x}_i)} (\mathbf{x}_i)_j=-k_i\in\mathbb{Z}$. We denote by $\mathbf{x}_i^+$ the vector of positive entries and by $\mathbf{x}_i^-$ the vector of absolute values of negative entries. Moreover, consider vectors $\mathbf{x}_{-\infty} \in\mathbb{Z}_{>0}^m,\mathbf{x}_\infty \in \mathbb{Z}_{<0}^n$, then we aim to compute the following vacuum expectation:
 
 \begin{equation}
 \label{equ:vacc}
-    \langle J_{\mathbf{x}_{-\infty}} \mid \prod_{i\colon (x_1)_i<0} J_{(x_1)_i} \prod_{i\colon (x_1)_i>0} J_{(x_1)_i} \cdots \prod_{i\colon (x_n)_i<0} J_{(x_n)_i} \prod_{i\colon (x_n)_i>0} J_{(x_n)_i} \mid J_{\mathbf{x}_\infty}\rangle.
+    \langle J_{\mathbf{x}_{-\infty}} \mid \prod_{i\colon (\mathbf{x}_1)_i<0} J_{(\mathbf{x}_1)_i} \prod_{i\colon (\mathbf{x}_1)_i>0} J_{(\mathbf{x}_1)_i} \cdots \prod_{i\colon (\mathbf{x}_n)_i<0} J_{(\mathbf{x}_n)_i} \prod_{i\colon (\mathbf{x}_n)_i>0} J_{(\mathbf{x}_n)_i} \mid J_{\mathbf{x}_\infty}\rangle.
 \end{equation}
 
 \begin{definition}
    Let $\mathbf{x}_{-\infty},\mathbf{x}_\infty,\mathbf{x}_1,\dots,\mathbf{x}_n$ vectors as above. Fix $n$ points $-\infty<p_1<\cdots<p_n<\infty$ in $\mathbb{P}^1_{\textrm{trop}}$ and $\pi\colon\Gamma\to\mathbb{P}^1_{\textrm{trop}}$ a leaky tropical cover, such that
    \begin{enumerate}
-       \item The ramification profile of $-\infty$ is $\mathbf{x}_{-\infty}$ and the ramification profile of $\infty$ is $\mathbf{x}_\infty$.
+       \item The ramification profile of $-\infty$ is $\mathbf{x}_{-\infty}$ and the ramification profile of $\infty$ is $-\mathbf{x}_\infty$.
        \item The vertex $p_i$ of $\mathbb{P}^1_{\textrm{trop}}$ has exactly one vertex $v_i$ in its pre-image,
-       \item The vertex $v_i$ has valency $\ell(\mathbf{x}_i)$. Its adjacent edges are in bijection with the components of $\mathbf{x}_i$. The edge corresponding to the $j$--th component has weight $|(\mathbf{x}_i)_j|$. It maps into $(-\infty,p_i)$ if $(\mathbf{x}_i)_j>0$ and into $(p_i,\infty)$ if $(\mathbf{x}_i)_j<0$.
+       \item The vertex $v_i$ has valency $\ell(\mathbf{x}_i)$. Its adjacent edges are in bijection with the components of $\mathbf{x}_i$. The edge corresponding to the $j$--th component has weight $|(\mathbf{x}_i)_j|$. It maps into $(-\infty,p_i)$ if $(\mathbf{x}_i)_j<0$ and into $(p_i,\infty)$ if $(\mathbf{x}_i)_j>0$.
        \item The genus of each vertex is $0$.
    \end{enumerate}
 
@@ -890,21 +897,23 @@ The following result is a version of Wick's theorem, see e.g. \cite{Wic50,BG16}.
     where $\pi$ is a leaky tropical cover of type $(\mathbf{x}_{-\infty},\mathbf{x}_1,\dots,\mathbf{x}_n,\mathbf{x}_\infty)$.
 \end{theorem}
 
+For the connected vacuum expectation, the same statement holds with the sum restricted to connected covers.
+
 
 We may use Wick's theorem to obtain a tropical interpretation of completed cycles. To begin with, we have the following expansion (see e.g. \cite{AKL25})
 
 \begin{equation}
     \mathcal{E}_{k}(z)
     =
-    \frac{1}{\varsigma(z)} \sum_{n=0}^\infty\frac{1}{n!} \sum_{\substack{j_1,\dots,j_n\\j_1+\dots+j_n=k}} \prod_{i=1}^n \varsigma (j_iz)\colon\prod_{i=1}^n\frac{J_{j_i}}{j_i}\colon+\frac{\delta_{k,0}}{\varsigma(z)} c.
+    \frac{1}{\varsigma(z)} \sum_{n=1}^\infty\frac{1}{n!} \sum_{\substack{j_1,\dots,j_n\in\Z\setminus\{0\}\\j_1+\dots+j_n=k}} \prod_{i=1}^n \varsigma (j_iz)\colon\prod_{i=1}^n\frac{J_{j_i}}{j_i}\colon+\frac{\delta_{k,0}}{\varsigma(z)} c.
 \end{equation}
 
-From this, we can obtain an explicit bosonic expression of $\mathcal{F}_r^k$. For this, we define the following set
+From this, we can obtain an explicit bosonic expression of $\mathcal{F}_r^k$. For this, for $N\ge0$, we define the following set
 
 \begin{equation}
-    S\mathbb{Z}^{r+1-2g;k}
+    S\mathbb{Z}^{N;k}
     =
-    \{ \textbf{x}\in\mathbb{Z}^{r+1-2g}\mid x_1\le \dots\le x_l<0<x_{l+1}\le\dots\le x_{r+1-2g},\, l>0,\,\sum x_i=-k \}.
+    \{ \textbf{x}\in(\mathbb{Z}\setminus\{0\})^N\mid x_1\le \dots\le x_N,\,\sum x_i=-k \}.
 \end{equation}
 
 Moreover, for two partitions $\mu$ and $\nu$ not necessarily of the same size and a non--negative integer $g$, we define quantities
@@ -920,15 +929,20 @@ Analogous to \cite[Lemma 3.3]{HL22}, we obtain the following result.
 \begin{lemma}\label{prop-expansion}
     We have
     \begin{equation}
+        \begin{split}
         \mathcal{F}_r^k
         =
-        r!\sum_{g=0}^\infty \sum_{\textbf{x}\in S\mathbb{Z}^{r+1-2g;k}} m_g(\textbf{x}^+,\textbf{x}^-) \prod_{x_i\in\textbf{x}^-} J_{-x_i} \prod_{x_i\in\textbf{x}^+} J_{x_i}.
+        &r!\sum_{g=0}^{\lfloor r/2\rfloor} \sum_{\textbf{x}\in S\mathbb{Z}^{r+1-2g;k}} \frac{m_g(\textbf{x}^+,\textbf{x}^-)}{|\mathrm{Aut}(\textbf{x}^+)|\,|\mathrm{Aut}(\textbf{x}^-)|}\colon\prod_{i=1}^{r+1-2g} J_{x_i}\colon
+        \\
+        &+
+        \delta_{k,0} r![u^r]\left(\frac{1}{\varsigma(u)}-\frac{1}{u}\right)c .
+        \end{split}
     \end{equation}
 \end{lemma}
 
 
 
-    Let $g$ a non-negative integer, $\mu$ and $\nu$ partitions of not necessarily the same size. Moreover, let $\underline{k}=(k_1,\dots,k_s)$ a tuple of integers and $\underline{r}=(r_1,\dots,r_s)$ a tuple of positive integers for $s>0$ satisfying
+    Let $g$ a non-negative integer, $\mu$ and $\nu$ partitions of not necessarily the same size. Moreover, let $\underline{k}=(k_1,\dots,k_s)$ a tuple of non-negative integers and $\underline{r}=(r_1,\dots,r_s)$ a tuple of positive integers for $s>0$ satisfying
     \begin{equation}
         \sum (r_i-1)
         =
@@ -947,9 +961,9 @@ Analogous to \cite[Lemma 3.3]{HL22}, we obtain the following result.
     \label{def-leaky}
         h^{\underline{k},\underline{r}}_{g;\mu,\nu}
         =
-        \frac{1}{\prod\mu_i\prod\nu_j} \left\langle \prod J_{\mu_i} \prod_{i=1}^s \frac{\mathcal{F}_{r_i}^{k_i}}{r_i} \prod J_{-\nu_j} \right\rangle.
+        \frac{1}{\prod\mu_i\prod\nu_j} \left\langle \prod J_{\mu_i} \prod_{i=1}^s \frac{\mathcal{F}_{r_i}^{k_i}}{r_i} \prod J_{-\nu_j} \right\rangle^\circ.
     \end{equation}
-    The case of $k_i=0$ recovers completed cycles Hurwitz numbers of \cite{OP06a}.
+    The case of $k_i=0$ recovers the connected numbers obtained from \cref{CCHNdef}.
   
     When $\underline{k}=(k^s)$ and $\underline{r}=(r^s)$, we denote the resulting numbers by  $h_g^{k,r}(\mu,\nu)$. Moreover, we will also be interested in studying the special case of $\nu=(q,\dots,q)$, in which case we denote the resulting number by $h^{k,r,q}_{g,\mu}$. We call these \emph{orbifold} leaky Hurwitz numbers.
 \end{definition}
@@ -962,7 +976,7 @@ Analogous to \cite[Lemma 3.3]{HL22}, we obtain the following result.
 
 \begin{theorem}
 \label{thm-corr}
-    Let $g$ a non-negative integer, $\mu$ and $\nu$ partitions of not necessarily the same size. Moreover, let $\underline{k}=(k_1,\dots,k_s)$ a tuple of integers and $\underline{r}=(r_1,\dots,r_s)$ a tuple of positive integers for $s>0$ satisfying
+    Let $g$ a non-negative integer, $\mu$ and $\nu$ partitions of not necessarily the same size. Moreover, let $\underline{k}=(k_1,\dots,k_s)$ a tuple of non-negative integers and $\underline{r}=(r_1,\dots,r_s)$ a tuple of positive integers for $s>0$ satisfying
     \begin{equation}
         \sum_{i=1}^s (r_i - 1) 
         =
@@ -973,10 +987,10 @@ Analogous to \cite[Lemma 3.3]{HL22}, we obtain the following result.
         =
         \sum\nu_j+\sum k_l.
     \end{equation}
-    We define the $C(\mu,\nu,\underline{k},\underline{r})$ as the set of $\underline{k}$-leaky tropical covers $\pi\colon\Gamma_1\to \P^1_{\text{trop}}$ satisfying:
+    We define the $C(\mu,\nu,\underline{k},\underline{r})$ as the set of connected $\underline{k}$-leaky tropical covers $\pi\colon\Gamma_1\to \P^1_{\text{trop}}$ satisfying:
     \begin{enumerate}
         \item The ramification profile of $(-\infty,p_1)$ is $\mu$ and of $(p_s,\infty)$ is $\nu$.
-        \item For each $p_i\in \Gamma_2$, there is a unique vertex $v_i$ with $\pi(v)=p_i$. We denote $w_i=\mathrm{val}(v_i)$.
+        \item For each $p_i\in \Gamma_2$, there is a unique vertex $v_i$ with $\pi(v_i)=p_i$. We denote $w_i=\mathrm{val}(v_i)$.
         \item We have $r_i-1 = 2g(v_i)-2+w_i$ for all $i=1,\dots,s$ and $g=g(\Gamma_1)$.
         \item For each vertex $v_i$, we denote by $\textbf{x}^-_{i}$ ($\textbf{x}^+_{i}$) the set of weights of incoming (resp. outgoing) edges adjacent to $v_i$. We define the vertex multiplicity of $v_i$ to be
         \begin{equation}
@@ -996,9 +1010,9 @@ Analogous to \cite[Lemma 3.3]{HL22}, we obtain the following result.
 \begin{proof}
     We consider the equality in \cref{def-leaky}. By employing \cref{prop-expansion}, we see that a summand of the right hand side has the form
     \begin{equation}
-        \frac{1}{\prod\mu_i\prod\nu_j}\prod_{i=1}^s (r_i-1)! m_{g_i}(\textbf{x}^+_i,\textbf{x}^-_i)\left\langle \prod_{i=1}^{\ell(\mu)} J_{\mu_i}\prod_{i=1}^s\prod_j  J_{(\textbf{x}_i)_j}\prod_{l=1}^{\ell(\nu)} J_{-\nu_j}\right\rangle
+        \frac{1}{\prod\mu_i\prod\nu_j}\prod_{i=1}^s (r_i-1)! m_{g_i}(\textbf{x}^+_i,\textbf{x}^-_i)\left\langle \prod_{i=1}^{\ell(\mu)} J_{\mu_i}\prod_{i=1}^s\prod_j  J_{(\textbf{x}_i)_j}\prod_{l=1}^{\ell(\nu)} J_{-\nu_j}\right\rangle^\circ
     \end{equation}
-    for $\textbf{x}\in S\mathbb{Z}^{r_i+1-2g_i}$. We apply Wick's theorem, we obtain a weighted enumeration of $\underline{k}$-leaky tropical covers $\pi\colon\Gamma_1\to\Gamma_2$, by moving the factors $(r_i-1)! m_{g_i}(\textbf{x}^+_i,\textbf{x}^-_i)$ into vertex multiplicities. The only thing that remains is that Wick's theorem produces tropical covers with all zero vertex genera. We define the genus $g(v_i)$ of $i$-th vertex of the obtained tropical cover via $r_i=2g_(v_i)-1+w_i$. The only thing that remains to show to see that the thus obtained set is $C(\mu,\nu,\underline{k},\underline{r})$, is to see that $g=g(\Gamma_1)$.
+    for $\textbf{x}\in S\mathbb{Z}^{r_i+1-2g_i;k_i}$. The scalar central summand in \cref{prop-expansion} does not contribute to the connected expectation with the ramification insertions. The automorphism factors in \cref{prop-expansion} cancel the corresponding Wick factors. Connected Wick's theorem gives a weighted enumeration of connected $\underline{k}$-leaky tropical covers $\pi\colon\Gamma_1\to\Gamma_2$, by moving the factors $(r_i-1)! m_{g_i}(\textbf{x}^+_i,\textbf{x}^-_i)$ into vertex multiplicities. The only thing that remains is that Wick's theorem produces tropical covers with all zero vertex genera. We define the genus $g(v_i)$ of $i$-th vertex of the obtained tropical cover via $r_i=2g(v_i)-1+w_i$. The only thing that remains to show to see that the thus obtained set is $C(\mu,\nu,\underline{k},\underline{r})$, is to see that $g=g(\Gamma_1)$.
 
     This is done by an Euler characteristic computation. First, we observe that
     \begin{align}
@@ -1075,7 +1089,7 @@ where $\sigma_a$ is the local deck transformation for $ x$ near $ a$, the prime 
 \begin{equation}
     K^a(z_1,z)
     =
-    \frac{\int_{z}^{\sigma_a(z)}\omega_{0,2}(z_1,\cdot)}{(\omega_{0,1}(\sigma_a(z)-\omega_{0,1}(z))dx(z)}.
+    \frac{\int_{z}^{\sigma_a(z)}\omega_{0,2}(z_1,\cdot)}{2(\omega_{0,1}(\sigma_a(z))-\omega_{0,1}(z))}.
 \end{equation}
 
 
@@ -1236,9 +1250,9 @@ Moreover, by construction this topological recursion behaves well with respect t
 \begin{theorem}[{\cite[Theorem 1.14]{ABDKS25universal}, \cite[Theorem 3.6]{ABDKS25}}]\label{Thmx-y}
     Assume that $ \Sigma $ is compact and $ B $ is the canonical Bergman kernel with vanishing $ \mf{A}$-periods. Then the \emph{$ x$-$y$ dual differentials}, i.e. the differentials computed by topological recursion on the \emph{dual} spectral curve $ (\Sigma, dy, dx, B, \mathsf{S} \setminus \mc{P})$, are given by
     \begin{equation}\label{NonExtendedx-y}
-        \omega^\vee_{n} (z_{\llbracket n \rrbracket}
+        \omega^\vee_{n} (z_{\llbracket n \rrbracket})
         =
-        (-1)^n \Bigg( \prod_{i=1}^n \sum_{r = 0}^\infty ( - d\frac{1}{dy_i})^r [u_i^r] \Bigg) \mb{W}_n (z_{\llbracket n \rrbracket, u_{\llbracket n \rrbracket }}).
+        (-1)^n \Bigg( \prod_{i=1}^n \sum_{r = 0}^\infty ( - d\frac{1}{dy_i})^r [u_i^r] \Bigg) \mb{W}_n (z_{\llbracket n \rrbracket}, u_{\llbracket n \rrbracket}).
     \end{equation}
     A useful reformulation, cf. \cite[Theorem 3.10.3]{ABDKS24} is the following: the dual extended differentials can be expressed in terms of the original extended differentials as
     \begin{equation}\label{Extendedx-y}
@@ -1312,7 +1326,7 @@ This topological recursion constructs KP $\tau$-functions.
     \begin{equation}
         \omega_n (z_{\llbracket n \rrbracket} )
         =
-        \delta_{n,2} \frac{d\xi_1 d\xi_1}{(\xi_1 - \xi_2)^2}
+        \delta_{n,2} \frac{d\xi_1 d\xi_2}{(\xi_1 - \xi_2)^2}
         +
         \sum_{k_1, \dotsc, k_n = 1}^\infty f_{k_1, \dotsc, k_n} \prod_{i=1}^n k_i \xi_i^{k_i-1} d\xi_i.
     \end{equation}
@@ -1342,19 +1356,19 @@ Let $g$ be a non--negative integer, fix positive integers $n,s>0$ and a tuple of
     2g-2+n.
 \end{equation}
 
-Moreover, define the hyperplane
+Moreover, define the lattice domain
 
 \begin{equation}
-    \mathcal{H}_{n,s}=\{(\mathbf{x},\underline{k})\in\mathbb{Z}^n\times\mathbb{Z}^s\mid \sum_{i=1}^nx_i=\sum_{i=1}^sk_i\}.
+    \mathcal{H}_{n,s}^{\ge0}=\{(\mathbf{x},\underline{k})\in\mathbb{Z}^n\times\mathbb{Z}_{\ge0}^s\mid \sum_{i=1}^nx_i=\sum_{i=1}^sk_i\}.
 \end{equation}
 
-Furthermore, we define the leaky resonance arrangement inside $\mathcal{H}_{n,s}$ given by the hyperplanes
+Furthermore, we define the leaky resonance arrangement inside $\mathcal{H}_{n,s}^{\ge0}$ given by the hyperplanes
 
 \begin{equation}
     W_{IJ}=\left\{\sum_{i\in I}x_i=\sum_{j\in J}k_j\right\}
 \end{equation}
 
-for $I\subset[n],J\subset[s]$. We call the collection $(W_{IJ})_{I,J}$ the \emph{leaky resonance arrangement}. The connected components of its complement in $\mathcal{H}_{n,s}$ will be referred to as \emph{chambers}.
+for $I\subset[n],J\subset[s]$. We call the collection $(W_{IJ})_{I,J}$ the \emph{leaky resonance arrangement}. The connected components of its complement in $\mathcal{H}_{n,s}^{\ge0}$ will be referred to as \emph{chambers}.
 
 
 We are interested in the map
@@ -1362,7 +1376,7 @@ We are interested in the map
 \begin{equation}
     h_g^{-,\underline{r}}
     \colon
-    \mathcal{H}_{n,s}\to\mathbb{Q}
+    \mathcal{H}_{n,s}^{\ge0}\to\mathbb{Q}
     \colon
     (\mathbf{x},\underline{k})\mapsto h^{\underline{k},\underline{r}}_{g;\mathbf{x}^+,\mathbf{x}^-}
 \end{equation}
@@ -1378,7 +1392,7 @@ In order to achieve this, we adopt methods from tropical geometry previously emp
 We begin with rephrasing \cref{thm-corr} in terms of ordered graphs which we call leaky monodromy graphs.
 
 \begin{definition}
-    Let $g$ be a non-negative integer, $\textbf{x}\in\mathbb{Z}\backslash\{\textbf{0}\}$, $\underline{k}$, $\underline{r}=(r_1,\dots,r_s)$ tuples of non-negative integers. Then, we call a directed graph $\Gamma$ a \emph{leaky combinatorial cover of type $(g,\textbf{x},\underline{k},\underline{r})$} if:
+    Let $g$ be a non-negative integer, $\textbf{x}\in(\mathbb{Z}\backslash\{0\})^n$, $\underline{k}$, $\underline{r}=(r_1,\dots,r_s)$ tuples of non-negative integers. Then, we call a directed graph $\Gamma$ a \emph{leaky combinatorial cover of type $(g,\textbf{x},\underline{k},\underline{r})$} if:
     \begin{enumerate}
         \item $\Gamma$ has $s+n$ vertices
         \item $\Gamma$ has $n$ leaves with adjacent edges called ends. We label the ends by $x_1,\dots,x_n$. For $x_i>0$, we call the corresponding edge an in-end and for $x_i<0$, we call it an out-end.
@@ -1387,7 +1401,7 @@ We begin with rephrasing \cref{thm-corr} in terms of ordered graphs which we cal
         \item The internal vertices are ordered compatibly with the orientation of the edges.
         \item To each edge, we associate a positive integer $\omega(e)\in\mathbb{N}$. At $v_i$ the weights satisfy $\sum_{e\to v} \omega(e)-\sum_{v\to e}\omega(e)=k_i$, i.e. the difference of the sum of incoming edges and outgoing edges is $k_i$.
     \end{enumerate}
-    Moreover, we call a leaky tropical cover \emph{$\underline{k}$-compatible} if the ordering of vertices is exactly $v_1<\cdots<v_n$.
+    Moreover, we call a leaky tropical cover \emph{$\underline{k}$-compatible} if the ordering of vertices is exactly $v_1<\cdots<v_s$.
 \end{definition}
 
 
@@ -1476,7 +1490,7 @@ Recall that $m_v=[z^{2g(v)}]\frac{\prod\mathcal{S}(x_iz)}{\mc{S}(z)}$, where $x_
 To begin with, we observe that
 \begin{equation}
 \label{equ-poly}
-    \frac{1}{|\mathrm{Aut}(\Gamma)|}\phi_{\mathcal{A}_\Gamma(f)}\prod_{v\in V^0(\Gamma)}m_v
+    \frac{1}{|\mathrm{Aut}(\Gamma)|}\phi_{\mathcal{A}_\Gamma}(f)\prod_{v\in V^0(\Gamma)}m_v
 \end{equation}
 
  is a polynomial in the coordinates of $\mathbb{R}E(\Gamma)$ of degree $|E^0(\Gamma)|+2\sum g_i$.
@@ -1511,7 +1525,7 @@ To begin with, we observe that
  For generic hyperplane arrangements, the topology changes when one passes through non-transversalities. In our setting however, there are situations where there are always non-transversalities present. However, the topology still can only change, when one passes through additional non-transversalities. We give the following definitions.
 
  \begin{definition}
-     Given $H_1,\dots,H_m$ hyperplanes in $\mathcal{A}_\Gamma(\textbf{x},\underline{m})$ that intersect in codimension $m-l$. This intersection is called \emph{good} if there exists a set $L$ of $l$ vertices in $\Gamma$, such that $H_1,\dots,H_m$ exactly correspond to the set of edges adjacent to the vertices in $L$. Moreover, we define the \emph{discriminant locus} $\mathcal{D}$ as the locus of points $(\textbf{x},\underline{k})\in\mathbb{R}^{n+s}$, such that $\mathcal{A}_\Gamma(\textbf{x},\underline{m})$ has non-good non-transverse intersections. The discriminant induces a hyperplane arrangement that we call the \emph{discriminant arrangement}.
+     Given $H_1,\dots,H_m$ hyperplanes in $\mathcal{A}_\Gamma(\textbf{x},\underline{k})$ that intersect in codimension $m-l$. This intersection is called \emph{good} if there exists a set $L$ of $l$ vertices in $\Gamma$, such that $H_1,\dots,H_m$ exactly correspond to the set of edges adjacent to the vertices in $L$. Moreover, we define the \emph{discriminant locus} $\mathcal{D}$ as the locus of points $(\textbf{x},\underline{k})\in\mathbb{R}^{n+s}$, such that $\mathcal{A}_\Gamma(\textbf{x},\underline{k})$ has non-good non-transverse intersections. The discriminant induces a hyperplane arrangement that we call the \emph{discriminant arrangement}.
  \end{definition}
 
  Our goal now is to classify the hyperplane in the discriminant arrangement.
@@ -1528,15 +1542,15 @@ We need a final lemma.
 \end{lemma}
 
 
-Let $\Gamma$ admit a disconnected flow and consider the corresponding simple cut $C$. The leaky balancing condition immediately implies that the ends of each connected component of $\Gamma\backslash C$ satisfy $\sum_{i\in I} x_i+\sum_{j\in J}k_j$ for some $I$ and $J$. Thus, the discriminant arrangement coincides with the leaky resonance arrangement. Thus, the topology of $\mathcal{A}_\Gamma(\textbf{x},\underline{k})$ only changes when crossing a wall as desired. 
+Let $\Gamma$ admit a disconnected flow and consider the corresponding simple cut $C$. The leaky balancing condition immediately implies that the ends of each connected component of $\Gamma\backslash C$ satisfy $\sum_{i\in I} x_i=\sum_{j\in J}k_j$ for some $I$ and $J$. Thus, the discriminant arrangement coincides with the leaky resonance arrangement. Thus, the topology of $\mathcal{A}_\Gamma(\textbf{x},\underline{k})$ only changes when crossing a wall as desired.
 
 To summarise, we have proved the following:
 
 \begin{theorem}
 \label{thm-piecepoly}
-    Let $g$ be a non--negative integers, fix positive integers $n,s>0$ and a tuple of positive integers $\underline{r}=(r_1,\dots,r_s)$ with $\sum_{i=1}^s (r_i - 1) = 2g-2+n$.
+    Let $g$ be a non--negative integer, fix positive integers $n,s>0$ and a tuple of positive integers $\underline{r}=(r_1,\dots,r_s)$ with $\sum_{i=1}^s (r_i - 1) = 2g-2+n$.
     
-    Then, the map $h_g^{-,\underline{r}}$ is piecewise polynomial with respect to the leaky resonance arrangement. Restricted to each chamber, it is a polynomial of degree $1+\sum_{i=1}^s r_i -n$.
+    Then, the map $h_g^{-,\underline{r}}$ on $\mathcal{H}_{n,s}^{\ge0}$ is piecewise polynomial with respect to the leaky resonance arrangement. Restricted to each chamber, it is a polynomial of degree $1+\sum_{i=1}^s r_i -n$.
 \end{theorem}
 
 \begin{remark}
@@ -1560,6 +1574,14 @@ In this setting the leaky resonance arrangement is described by a wall $W_{Ij}=\
 
 We prove the following theorem.
 
+For a signed tuple $\mathbf{a}$, write $\mathbf{a}^+$ for its positive entries and $\mathbf{a}^-$ for the absolute values of its negative entries, and put $|\mathbf{a}|=\sum_i a_i$. In the wall-crossing formula, we use the convention
+\begin{equation}
+    h^{k,r}_{g;\mathbf{a},\mathbf{b}}
+    =
+    h^{k,r}_{g;\mathbf{a}^+\cup\mathbf{b}^-,\,\mathbf{a}^-\cup\mathbf{b}^+},
+\end{equation}
+and terms with nonintegral or negative genus are zero.
+
 \begin{theorem}
     \label{thm-WC}
     We have
@@ -1571,10 +1593,10 @@ We prove the following theorem.
         \\
         |\mathbf{y}|=|\mathbf{z}|+\alpha_2 k
         \\
-        |\mathbf{z}|=|\mathbf{x}_{I^{c}}|+\alpha_3k}}(-1)^{\alpha_2}\frac{\prod y_i}{\ell(\mathbf{y})!}\frac{\prod z_i}{\ell(\mathbf{z})!}h^{k,r}_{g_1;\mathbf{x}_I,\mathbf{y}} h^{k,r}_{g_2;\mathbf{y},\mathbf{z}} h^{k,r}_{g_3;\mathbf{z},\mathbf{x}_{I^c}},
+        |\mathbf{z}|=|\mathbf{x}_{I^{c}}|+\alpha_3k}}(-1)^{\alpha_2}\binom{s}{\alpha_1,\alpha_2,\alpha_3}\frac{\prod y_i}{\ell(\mathbf{y})!}\frac{\prod z_i}{\ell(\mathbf{z})!}h^{k,r}_{g_1;\mathbf{x}_I,\mathbf{y}} h^{k,r}_{g_2;\mathbf{y},\mathbf{z}} h^{k,r}_{g_3;\mathbf{z},\mathbf{x}_{I^c}},
     \end{equation}
 
-    where $\mathbf{y},\mathbf{z}$ are ordered tuples of positive integers with sums $|\mathbf{y}|$ and $|\mathbf{z}|$ and $g_1=\frac{\alpha_1 r+2-\ell(\mathbf{x}_I,-\mathbf{z})}{2}$ (and analogously for $g_2,g_3$).
+    where $\mathbf{y},\mathbf{z}$ are ordered tuples of positive integers with sums $|\mathbf{y}|$ and $|\mathbf{z}|$ and $g_1=\frac{\alpha_1(r-1)+2-\ell(\mathbf{x}_I)-\ell(\mathbf{y})}{2}$, $g_2=\frac{\alpha_2(r-1)+2-\ell(\mathbf{y})-\ell(\mathbf{z})}{2}$, $g_3=\frac{\alpha_3(r-1)+2-\ell(\mathbf{z})-\ell(\mathbf{x}_{I^c})}{2}$.
 \end{theorem}
 
 \begin{remark}
@@ -1584,7 +1606,7 @@ We prove the following theorem.
 \begin{proof}
     The argument is very similar to the case of classical double Hurwitz number in \cite{CJM11} and to that of tropical Jucys covers in \cite[section 4]{HL20}. Thus, we only give a sketch.
 
-    The key idea is to track how the contribution of $F$--chambers changes when crossing a wall. This is a formalised by a polyhedral Gauss--Manin connection. We collect the important intermediate steps.
+    The key idea is to track how the contribution of $F$--chambers changes when crossing a wall. This is formalised by a polyhedral Gauss--Manin connection. We collect the important intermediate steps.
 
     To begin with, we define a notion of certain cuts on $\mathbf{x}$--graphs with an orientation. For this, consider such a graph $\Gamma$ with a subset of edges $\mathfrak{E}$. Then, we define a new graph whose vertices are connected components of $\Gamma\backslash\mathfrak{E}^c$ and whose edges are $\mathfrak{E}$. We denote this new graph by $\Gamma/\mathfrak{E}$ and call it the contraction of $\Gamma$ w.r.t. $\mathfrak{E}$.
     
@@ -1617,13 +1639,13 @@ We prove the following theorem.
     An inclusion--exclusion process then simplifies this formula to an expression in terms of a small subset of cuts. More precisely, we call a cut $T$ a \emph{thin cut} if all edges in $T$ are either adjacent to the initial or the final component. Given a thin cut $T$, the set of all cuts containing it is denoted by $P(T)$. Each cut contains a unique thin cut. One then obtains (non--trivially) for a given thin cut $T$ that
     \begin{equation}
     \label{equ-inclexcl}
-        (-1)^{\alpha_3}\binom{s}{\alpha_1,\alpha_2,\alpha_3}=\sum_{\mathfrak{E}\in P(T)} (-1)^{r(\mathfrak{E})-1}\binom{s}{\alpha_1, s_1,\dots ,s_{r(\mathfrak{E})-1},\alpha_3}.
+        (-1)^{\alpha_2}\binom{s}{\alpha_1,\alpha_2,\alpha_3}=\sum_{\mathfrak{E}\in P(T)} (-1)^{r(\mathfrak{E})-1}\binom{s}{\alpha_1, s_1,\dots ,s_{r(\mathfrak{E})-1},\alpha_3}.
     \end{equation}
 
     Finally, we observe that a thin cut cuts a graph $\Gamma$ into three components $\Gamma_1,\Gamma_2,\Gamma_3$ with $\alpha_i$ many inner vertices. Denoting $\Gamma_1$ as a $(\mathbf{x}_I,-\mathbf{y})$--graph, $\Gamma_2$ as a $(\mathbf{y},\mathbf{z})$--graph and $\Gamma_3$ as a $(\mathbf{z},\mathbf{x}_{I^c})$--graph, we obtain
     \begin{equation}
     \label{equ-cutgraphs}
-        \phi_{\mathcal{A}_\Gamma}=\binom{s}{\alpha_1,\alpha_2,\alpha_3}\frac{\prod y_i}{\ell(\mathbf{y})!}\frac{\prod z_i}{\ell(\mathbf{z})!}\phi_{\mathcal{A}_{\Gamma_1}}\phi_{\mathcal{A}_{\Gamma_2}}\phi_{\mathcal{A}_{\Gamma_3}}.
+        \phi_{\mathcal{A}_\Gamma}=\frac{\prod y_i}{\ell(\mathbf{y})!}\frac{\prod z_i}{\ell(\mathbf{z})!}\phi_{\mathcal{A}_{\Gamma_1}}\phi_{\mathcal{A}_{\Gamma_2}}\phi_{\mathcal{A}_{\Gamma_3}}.
     \end{equation}
 
     Plugging \cref{equ-inclexcl,equ-cutgraphs} into \cref{equ-wallcrossstep} proves the theorem.
@@ -1698,7 +1720,7 @@ We obtain the following proposition.
         =
         Y^\kappa \big( 1 - \frac{k}{r} Y^{r-1} X^{r-1+k} \big)^{\rho + \kappa} ,
 	\end{equation}
-	with $ \kappa $ and $ \rho$ given by $ g = \gcd (qr, k) $ and $ \rho = \frac{qr}{g}$, $ \kappa = \frac{k}{g}$.\par
+	with $ \kappa $ and $ \rho$ given by $ d = \gcd (qr, k) $ and $ \rho = \frac{qr}{d}$, $ \kappa = \frac{k}{d}$.\par
 	The differentials $ dY$ and $ dX$ are related by
 	\begin{equation}\label{DiffEqFory}
 		(1 - (q(r-1)+k)Y^{r-1} X^{r-1+k} ) \frac{dY}{Y}
@@ -1771,7 +1793,7 @@ We obtain the following proposition.
 	\begin{equation}\label{DerivativeSC}
 		\frac{\bar{Y}'}{\bar{Y}} 
         =
-        (q-1) \frac{1}{X} + \frac{qr+k}{r+1} \frac{\bar{Y}^{r-1} X^{r-1+k} }{ 1 - \frac{k}{r} \bar{Y}^{r-1} X^{r-1+k} } \Big( (r-1) \frac{\bar{Y}'}{\bar{Y}} + (r-1+k) \frac{1}{X} \Big).
+        (q-1) \frac{1}{X} + \frac{qr+k}{r} \frac{\bar{Y}^{r-1} X^{r-1+k} }{ 1 - \frac{k}{r} \bar{Y}^{r-1} X^{r-1+k} } \Big( (r-1) \frac{\bar{Y}'}{\bar{Y}} + (r-1+k) \frac{1}{X} \Big).
 	\end{equation}
 	Reordering and simplifying a bit gives
 	\begin{align}
@@ -1790,7 +1812,7 @@ We obtain the following proposition.
 From \cref{prop-01spectral}, we may now derive a closed formula for $\lh^{k,r,q}_{0;(m)}$. For $r=2$, it specialises to the one found in \cite[Theorem 1]{CMS25}.
 
 \begin{theorem}
-    Let $r,k,m,q$ be positive integers and define $A=\frac{k}{r}$. Then, $ \lh^{k,r,q}_{0;(m)} $ is non-zero if and only if $b = \frac{m-q}{q(r-1)+k}$ is an integer, and in that case
+    Let $r,k,m,q$ be positive integers with $r>1$ and define $A=\frac{k}{r}$. Then, $ \lh^{k,r,q}_{0;(m)} $ is non-zero if and only if $b = \frac{m-q}{q(r-1)+k}$ is a non-negative integer, and in that case
     \begin{equation}
         \lh^{k,r,q}_{0;(m)}
         =
@@ -1799,7 +1821,7 @@ From \cref{prop-01spectral}, we may now derive a closed formula for $\lh^{k,r,q}
 \end{theorem}
 
 \begin{proof}
-    We take the $g$-th power of \cref{SpectralCurve} to obtain
+    We take the $d$-th power of \cref{SpectralCurve}, where $d=\gcd(qr,k)$, to obtain
 
     \begin{equation}
         X^{(q-1)k}
@@ -1823,7 +1845,7 @@ From \cref{prop-01spectral}, we may now derive a closed formula for $\lh^{k,r,q}
         \frac{1}{n}[W^{n-1}]\left(1-\frac{k}{r}W^{r-1} \right)^{-n\left(\frac{qr+k}{k}\right)}
     \end{equation}
 
-    Shiftung $n$ by $1$ we obtain
+    Shifting $n$ by $1$ we obtain
     \begin{align}
         \begin{split}
             [(X^{\frac{q(r-1)+k}{r-1}})^{n+1}]W
@@ -2011,17 +2033,16 @@ An important property is given by the following lemma.
 \begin{lemma}\label{LogDerz}
 	The logarithmic derivative of $z$ is given by
 	\begin{equation}
-		\frac{dz}{z} = \frac{dX}{X(1- (qr+k) X^k (XY)^{r})}
+		\frac{dz}{z} = \frac{dX}{X(1- (q(r-1)+k) X^k (XY)^{r-1})}
 	\end{equation}
 \end{lemma}	
 
 \begin{proof}
-To begin with, we observe
-
+Differentiating the definition of $z$ gives
 \begin{equation}
-    \frac{dz}{z}=\frac{dX}{X} + \frac{ Y^{r} X^{r+k}}{ 1 - \frac{k}{r+1} Y^{r} X^{r+k}} \Big( r \frac{dY}{Y} + (r+k) \frac{dX}{X} \Big)
+    \frac{dz}{z}=\frac{dX}{X} + \frac{ Y^{r-1} X^{r-1+k}}{ 1 - \frac{k}{r} Y^{r-1} X^{r-1+k}} \Big( (r-1) \frac{dY}{Y} + (r-1+k) \frac{dX}{X} \Big).
 \end{equation}
-    Using \cref{prop-01spectral} to express $\frac{dY}{Y}$ in terms of $\frac{dX}{X}$ and some further algebra proves the lemma.
+    Using \cref{DiffEqFory} to express $\frac{dY}{Y}$ in terms of $\frac{dX}{X}$ proves the lemma.
 \end{proof}
 
 We now introduce the generating function
@@ -2061,7 +2082,7 @@ We note that for any power series $ f(X) = \sum_{n=0}^\infty f_n X^n$, we have
     \begin{split}
          &\frac{1}{q(r-1)+k} \Big( X_1 \frac{d}{dX_1} + X_2 \frac{d}{dX_2} \Big) W_{0,2} (X_1,X_2)
       =\\
-      &X_1^{k+1} \frac{dW_{0,2}}{X_1} (X_1,X_2) (X_1 Y(X_1))^{r-1} + X_2^{k+1} \frac{dW_{0,2}}{dX_2}(X_1,X_2) (X_2 Y(X_2))^{r-1}
+      &X_1^{k+1} \frac{\partial W_{0,2}}{\partial X_1} (X_1,X_2) (X_1 Y(X_1))^{r-1} + X_2^{k+1} \frac{\partial W_{0,2}}{\partial X_2}(X_1,X_2) (X_2 Y(X_2))^{r-1}
       \\
       &  - 
       \frac{ X_1^{k-1} (X_1 Y(X_1))^{r-1} - X_2^{k-1} (X_2 Y(X_2))^{r-1}}{X_1^{-1} - X_2^{-1}} \,.
@@ -2072,18 +2093,18 @@ We note that for any power series $ f(X) = \sum_{n=0}^\infty f_n X^n$, we have
 
     \begin{align}
     \begin{split}
-        &\Big(X_1^{r-1+k} Y(X_1)^{r-1} - \frac{1}{q(r-1)+k}\Big) X_1 \frac{dW_{0,2}}{dX_1} + \Big( X_2^{r-1+k} Y(X_2)^{r-1} - \frac{1}{q(r-1)+k} \Big) X_2 \frac{dW_{0,2}}{dX_2} \\
-        &= \frac{X_1^{r+k-2} Y(X_1)^{r-2} - X_2^{r+k-2} Y(X_2)^{r-1}}{X_1^{-1} - X_2^{-1}} \,.
+        &\Big(X_1^{r-1+k} Y(X_1)^{r-1} - \frac{1}{q(r-1)+k}\Big) X_1 \frac{\partial W_{0,2}}{\partial X_1} + \Big( X_2^{r-1+k} Y(X_2)^{r-1} - \frac{1}{q(r-1)+k} \Big) X_2 \frac{\partial W_{0,2}}{\partial X_2} \\
+        &= \frac{X_1^{r+k-2} Y(X_1)^{r-1} - X_2^{r+k-2} Y(X_2)^{r-1}}{X_1^{-1} - X_2^{-1}} \,.
     \end{split}
     \end{align}
 
-    Using \cref{LogDerz} and denoting the Euler operator $E_z = z_1 \frac{\partial}{\partial_{z_1}} + z_2\frac{\partial}{\partial_{z_2}}$ we finally obtain
+    Using \cref{LogDerz} and denoting the Euler operator $E_z = z_1 \frac{\partial}{\partial z_1} + z_2\frac{\partial}{\partial z_2}$, we finally obtain
 
     \begin{equation}
-        E_zW_{0,2}=\frac{X_1^{r+k-2} Y(X_1)^{r-1} - X_2^{r+k-2} Y(X_2)^{r-1}}{X_1^{-1} - X_2^{-1}}.
+        E_zW_{0,2}=-(q(r-1)+k)\frac{X_1^{r+k-2} Y(X_1)^{r-1} - X_2^{r+k-2} Y(X_2)^{r-1}}{X_1^{-1} - X_2^{-1}}.
     \end{equation}
 
-    Applying $E_z$ to $\log (X_1^{-1} - X_2^{-1}) - \log (z_1^{-1} - z_2^{-1})$ yields the same right hand side. Inverting $E_z$ and applying $d_1d_2$ yields the proposition.
+    Applying $E_z$ to $\log (z_1^{-1} - z_2^{-1}) - \log (X_1^{-1} - X_2^{-1})$ yields the same right hand side. We invert $E_z$ in the expansion at $X_1=X_2=0$ by choosing the primitive with vanishing constant term and no degree-zero Laurent part. Applying $d_1d_2$ then yields the proposition.
 \end{proof}
 
 
@@ -2121,12 +2142,12 @@ Similarly, we obtain
 
 With this, we now aim to find closed expressions for $\lh_{0,(l,m)}^{k,r,q}$. We observe that
 \begin{equation}
-    d_1 d_2 \log \big( \frac{X_1^{-1} - X_2^{-1}}{z_1^{-1} - z_2^{-1}} \big)
+    d_1 d_2 \log \big( \frac{z_1^{-1} - z_2^{-1}}{X_1^{-1} - X_2^{-1}} \big)
     =
     \frac{dz_1 dz_2}{(z_1 - z_2)^2} - \frac{dX_1 dX_2}{(X_1 - X_2)^2}.
 \end{equation}
 
-Thus, it suffices to compare $W_{0,2}$ with the expansion of $\log ( X_1^{-1} - X_2^{-1}) - \log ( z_1^{-1} - z_2^{-1} ) $. We introduce the Euler operator $E_X = X_1 \partial_{X_1} + X_2 \partial_{X_2} $ and observe that
+Thus, it suffices to compare $W_{0,2}$ with the expansion of $\log ( z_1^{-1} - z_2^{-1}) - \log ( X_1^{-1} - X_2^{-1}) $. We introduce the Euler operator $E_X = X_1 \partial_{X_1} + X_2 \partial_{X_2} $ and observe that
 \begin{equation}
     E_X W_{0,2}
     =
@@ -2148,7 +2169,7 @@ and with \cref{prop-rec02}
 \begin{equation}
     \lh_{0,(l,m)}^{k,r,q}
     =
-    \frac{b!}{l+m} \Res_{X_1=0} \Res_{X_2=0} E_X \log \big( \frac{X_1^{-1} - X_2^{-1}}{z_1^{-1} - z_2^{-1}} \big) \frac{dX_1 dX_2}{X_1^{l+1} X_2^{m+1}} .
+    \frac{b!}{l+m} \Res_{X_1=0} \Res_{X_2=0} E_X \log \big( \frac{z_1^{-1} - z_2^{-1}}{X_1^{-1} - X_2^{-1}} \big) \frac{dX_1 dX_2}{X_1^{l+1} X_2^{m+1}} .
 \end{equation}
 
 Since
@@ -2192,7 +2213,7 @@ We consider the Euler operator $ E_X = X_1 \partial_{X_1} + X_2 \partial_{X_2} $
 \begin{equation}
     E_X
     =
-    \frac{z_1(2+z_1)^2}{(2-3z_1^2)} \partial_{z_1} + \frac{z_2(2+z_2)^2}{(2-3z_2^2)} \partial_{z_2}.
+    \frac{z_1(2+z_1^2)}{(2-3z_1^2)} \partial_{z_1} + \frac{z_2(2+z_2^2)}{(2-3z_2^2)} \partial_{z_2}.
 \end{equation}
 
 We obtain
@@ -2212,7 +2233,7 @@ We obtain
 Therefore, we have
 
 \begin{equation}
-    E_X \log \big( \frac{X_1^{-1} - X_2^{-1}}{z_1^{-1} - z_2^{-1}} \big)
+    E_X \log \big( \frac{z_1^{-1} - z_2^{-1}}{X_1^{-1} - X_2^{-1}} \big)
     =
     \frac{4z_1 z_2 (3z_1 z_2 + 2)}{(3z_1^2 - 2) (3z_2^2 - 2)}.
 \end{equation}
@@ -2221,7 +2242,7 @@ We compute
 
 \begin{equation}
 \begin{split}
-    &\Res_{X_1=0} \Res_{X_2=0}  E_X  \log \big(\frac{X_1^{-1} - X_2^{-1}}{z_1^{-1} - z_2^{-1}} \big) \frac{dX_1 dX_2 }{X_1^{l+1} X_2^{m+1}}
+    &\Res_{X_1=0} \Res_{X_2=0}  E_X  \log \big(\frac{z_1^{-1} - z_2^{-1}}{X_1^{-1} - X_2^{-1}} \big) \frac{dX_1 dX_2 }{X_1^{l+1} X_2^{m+1}}
     \\
     &\quad =
     \Res_{z_1=0} \Res_{z_2=0} \frac{(2 + z_1^2)^{2(l+1)} (2 + z_2^2)^{2(m+1)} 4 z_1 z_2 (3 z_1 z_2 + 2)}{(4z_1)^{l+1} (4z_2)^{m+1} (3z_1^2 - 2) (3z_2^2 - 2)}4 \frac{2 - 3z_1^2}{(2 + z_1^2)^3} dz_1 4 \frac{2 - 3z_2^2}{(2 + z_2^2)^3} dz_2
@@ -2234,15 +2255,15 @@ We compute
 To obtain closed expressions, we extract the coefficient of $z_1^{-1} z_2^{-1}$ in the power series and observing that for $(k,r,q)=(1,2,1)$ and $\mu=(l,m)$, we have $b=\frac{l+m}{2}$. In total, we have the following formulae, that depend on the parities of $l$ and $m$:
 
 \begin{align}
-		\lh^{1,1,1}_{0,(2l_1,2l_2)}
+		\lh^{1,2,1}_{0,(2l_1,2l_2)}
 		&=
 		\frac{3}{2^{l_1+l_2-1}} \binom{4l_1-1}{l_1-1} \binom{4l_2-1}{l_2-1} (l_1 + l_2 - 1)! \label{h02EvenSimplecase}
 		\\
-		\lh^{1,1,1}_{0,(2l_1-1,2l_2-1)}
+		\lh^{1,2,1}_{0,(2l_1-1,2l_2-1)}
 		&=
 		\frac{1}{2^{l_1+l_2-2}} \binom{4l_1 -3}{l_1 -1} \binom{4l_2 -3}{l_2 -1} (l_1 + l_2 -2)!
 		\\
-		\lh^{1,1,1}_{0,(2l_1,2l_2-1)}
+		\lh^{1,2,1}_{0,(2l_1,2l_2-1)}
 		&=
 		0 .
 	\end{align}
@@ -2260,7 +2281,7 @@ With this example under the belt, we now treat the general case. A similar calcu
 We obtain after rearranging, writing $A=\frac{k}{r}$ and $B=q(r-1)+k$, that
 
 \begin{equation}
-    E_X \log \big( \frac{X_1^{-1} - X_2^{-1}}{z_1^{-1} - z_2^{-1}} \big)
+    E_X \log \big( \frac{z_1^{-1} - z_2^{-1}}{X_1^{-1} - X_2^{-1}} \big)
     =
     \frac{B( \sum_{j=1}^{B-1} z_1^j z_2^{B-j} + (B-A) (z_1z_2)^B)}{(1 + (A - B) z_1^{B}) (1 + (A - B) z_2^{B})}.
 \end{equation}
@@ -2271,7 +2292,7 @@ It remains to compute
     \Res_{X_1=0} \Res_{X_2=0}  \frac{B (\sum_{j=1}^{B-1} z_1^j z_2^{B-j} + (B - A) (z_1 z_2)^B)}{(1 + (A - B) z_1^{B}) (1 + (A - B) z_2^{B})} \frac{ dX_1 dX_2 }{X_1^{l+1} X_2^{m+1}}.
 \end{equation}
 
-Writing $X=z(1-Az^B)^{-\frac{1}{A}}$, we obtain
+Writing $X=z(1+Az^B)^{-\frac{1}{A}}$, we obtain
 
 \begin{equation}
 \begin{split}               
@@ -2290,15 +2311,17 @@ Extracting the $z_1^{-1}z_2^{-1}$ coefficient, we have proved the following form
 \begin{theorem}
     We have for $A = \frac{k}{r}$ and $B = q(r-1)+k$ that
     \begin{equation}
+        \lh_{0,(l,m)}^{k,r,q}=0
+        \quad\textrm{if }B\nmid(l+m).
+    \end{equation}
+    If $B\mid(l+m)$ and $b=\frac{l+m}{B}$, then
+    \begin{equation}
         \lh_{0,(l,m)}^{k,r,q}
-        =\frac{b!}{l+m} A^{\frac{l+m}{B}-2} B \begin{cases}
-            0, &\textrm{if $l+m\not\equiv 0\pmod{B}$}\\
+        =\frac{b!}{l+m} A^{b-2} B \begin{cases}
             A \binom{\frac{l}{A} - 1}{ \lfloor \frac{l}{B} \rfloor } \binom{\frac{m}{A} - 1}{ \lfloor \frac{m}{B} \rfloor } &\textrm{if $l\equiv - m \not\equiv 0 \pmod{B}$}\\           
             (B - A) \binom{\frac{l}{A} - 1}{\frac{l-B}{B}} \binom{\frac{m}{A} - 1}{\frac{m-B}{B}} &\textrm{if $l \equiv m \equiv 0\pmod{B}$}.
         \end{cases}
-        % \frac{b!}{l+m} A^{\frac{l+m}{B}-2} B \left( A \sum_{j=1}^{B-1} \binom{\frac{l}{A} - 1}{\frac{l-j}{B}} \binom{\frac{m}{A} - 1}{\frac{m-B+j}{B}} + (B - A) \binom{\frac{l}{A} - 1}{\frac{l-B}{B}} \binom{\frac{m}{A} - 1}{\frac{m-B}{B}} \right).
     \end{equation}
-    %This is non-zero if and only if $ l+ m \equiv 0 \pmod{B}$, i.e. when $b$ is a non-negative integer. In that case, exactly one summand contributes, namely the one with $ l \equiv j \pmod{B} $, or the last summand if $ l \equiv 0 \pmod{B}$.
 \end{theorem}
 
 
@@ -2335,7 +2358,7 @@ We define the generating functions
 	\sum_q s_q z^q
 \end{equation}
 
-Because $ k \ge 0$, the cut-and-join operator annihilates the covacuum. So $ \< 0| e^{-W}  = \< 0|$, and hence it makes sense to calculate $ e^{-W} J(X) e^W = e^{-\ad_W} J(X)$.
+The strictly positive leakiness part of the cut-and-join operator annihilates the covacuum. Diagonal scalar terms act only by an overall factor, which is irrelevant for connected correlators; we suppress this normalization. Hence it makes sense to calculate $ e^{-W} J(X) e^W = e^{-\ad_W} J(X)$.
 
 
 \begin{proposition}\label{CurrentConjugation}
@@ -2404,7 +2427,7 @@ Because $ k \ge 0$, the cut-and-join operator annihilates the covacuum. So $ \< 
 	\begin{equation}
 		\frac{1}{n!} \ad_{-W}^n J_m 
 		\eqqcolon 
-		\sum_{l \in \Z'} \sum_{\mu \in \Z} \Phi^{\mf{W}}_{n,\mu} (\mf{J}_{m}) \big( \hbar (l -\frac{\mu}{2})\big) E_{l - \mu} + \tilde{\Phi}^{\mf{W}}_{n} (\mf{J}_m) c,
+		\sum_{l \in \Z'} \sum_{\mu \in \Z} \Phi^{\mf{W}}_{n,\mu} (\mf{J}_{m}) \big( \hbar (l -\frac{\mu}{2})\big) E_{l-\mu,l} + \tilde{\Phi}^{\mf{W}}_{n} (\mf{J}_m) c,
 	\end{equation}
 	we do find that $ \Phi^{\mf{W}}_{0,\mu} (\mf{J}_{m}) (s) = \delta_{m,\mu}$ and that its recursion holds.\par
     For the central term, we find that
@@ -2464,7 +2487,7 @@ The same proof in fact yields the following more general result.
         \begin{split}
             \Res_{z=0} \mc{E}(\hbar \del_s , z) \Phi^{\mf{W}}(\mf{P}) (z,s, \beta ) \Big|_{s=0}
             &=
-            \sum_{l \in \Z' } \sum_{\mu \in \Z} \Phi^{\mf{W}}_{n,\mu} (\mf{P}) \beta^n (\hbar(l-\frac{\mu}{2})) E_{l-\mu,l}
+            \sum_{n=0}^\infty \sum_{l \in \Z' } \sum_{\mu \in \Z} \Phi^{\mf{W}}_{n,\mu} (\mf{P})(\hbar(l-\frac{\mu}{2})) \beta^n E_{l-\mu,l}
             \\
             & \qquad \qquad
             +
@@ -2656,7 +2679,7 @@ Because they are Hamiltonian flows, $ (\Xi_\beta ,\Upsilon_\beta )$ is a symplec
 
 This symplectic flow is well-defined for formal $ \beta$, i.e. we can consider $ \Xi_\beta (z,s) , \Upsilon_\beta (z,s) \in \C \llbracket z, s, \beta \rrbracket$. In the general setup with $ \mf{w} \in \C \llbracket z, s\rrbracket $, we have no guarantees that the $ \beta = 1$ flow, necessary for the next proposition, exists. However, we will see that in a fairly wide class of cases, we will be able to write the $ \beta = 1$ flow explicitly as analytic functions.
 
-We will consider both the cut-and-join operator $ W$ and the `right ramification operator' $ \check{S} = \sum_{q=1}^\infty s_q \frac{J_q}{q\hbar} $ as inducing flows. We will require that $ \mf{w} (z, s= 0) = 0$, to ensure that the central term from the first flow vanishes. If this term can be computed otherwise, it can be added to $ y(z)$ by the same argument.
+We will consider both the cut-and-join operator $ W$ and the `right ramification operator' $ \check{S} = \sum_{q=1}^\infty s_q \frac{J_{-q}}{q\hbar} $ as inducing flows. We will require that $ \mf{w} (z, s= 0) = 0$, to ensure that the central term from the first flow vanishes. If this term can be computed otherwise, it can be added to $ y(z)$ by the same argument.
 
 \begin{proposition}\label{GeneralSC}
 	If $ \mf{w}(z,s) \in s\C \llbracket z, s\rrbracket $, the spectral curve is given by 
@@ -2889,7 +2912,7 @@ For completeness, let us explicitly define $ \phi$ and $ \bar{\phi}$ in terms of
     \begin{equation}\label{Generalphi}
 		(n+1) \phi_{m,n+1,\mu} (s) 
 		=
-		\sum_{k = 0}^\infty w_k (\frac{s}{\hbar} + \frac{\mu+m+k}{2}, \hbar ) \phi_{m,n, \mu+k} ( s + \frac{\hbar k}{2}) - w_k ( \frac{s}{\hbar} - \frac{\mu+k}{2}, \hbar ) \phi_{m,n,\mu+m+k} \big( s - \frac{\hbar k}{2}\big) .
+		\sum_{k = 0}^\infty w_k (\frac{s}{\hbar} + \frac{\mu+m+k}{2}, \hbar ) \phi_{m,n, \mu+k} ( s + \frac{\hbar k}{2}) - w_k ( \frac{s}{\hbar} - \frac{\mu+m+k}{2}, \hbar ) \phi_{m,n,\mu+k} \big( s - \frac{\hbar k}{2}\big) .
 	\end{equation}
     Moreover, from \cref{HamFlow,DefSymplectomorphism}, we find directly that
     \begin{equation}\label{phiAsRatio}
@@ -2918,22 +2941,20 @@ To adapt \cite[Sections 4.3-4]{BDKS22}, we use \cite[Lemma 4.6]{BDKS22} as defin
 		\\
 		L_t(v,z,s,\hbar)
 		&=
-		\bar{\phi}_v(z,s)^{-1} \del_s^t \bar{\phi}_v (z,s) L_0(v,z,s,\hbar)
-		=
 		\Big( \del_s + v \frac{\bar{\phi}_1' (z, s)}{\bar{\phi}_1 (z, s)} \Big)^t L_0 (v,z,s, \hbar) .
 	\end{align}
 	Moreover, $ L_0$, and hence all $ L_t$, are power series in $ \hbar$ with coefficients that are polynomial in $v$ and the $s$-derivatives of $ \log \bar{\phi}_1 (z, s)$.
 \end{lemma}
 
 \begin{proof}
-	The first identity holds from the definition of $ \bar{\phi}$ as the leading $ \hbar$ order term of $ \phi$. The second equality follows directly from the definition, while the last follows from $ \bar{\phi}_v = (\bar{\phi}_1)^v$.\par
+	The first identity holds from the definition of $ \bar{\phi}$ as the leading $ \hbar$ order term of $ \phi$. The second equality follows from $ \phi_v=\bar{\phi}_vL_0$ and $ \bar{\phi}_v = (\bar{\phi}_1)^v$.\par
 	The polynomiality statement follows from the recursive formula.
 \end{proof}
 
 With this, we get a minor extension of \cite[Proposition 4.3]{BDKS22}, which they call their \emph{principal identity}. We write it in terms of a one-form in $z$, rather than a function, cf. \cite[Proposition 4.4]{ABDKS24}.
 
 \begin{proposition}[{\cite[Proposition 4.3]{BDKS22}}]
-	Let $h(u, z) \in \C [u]\llbracket \hbar, z \rrbracket [z^{-1}] dz $. Then
+	Let $H(u, z) \in \C [u]\llbracket \hbar, z \rrbracket [z^{-1}] dz $. Then
 	\begin{equation}
 		\sum_{m \in \Z} X^m\frac{dX}{X} \sum_{t = 0}^\infty \Res_{\tilde{z} = 0} \del_s^t \phi_m (\tilde{z},s) \big|_{s = 0} [u^t] e^{u S(\tilde{z})} \frac{H(u,\tilde{z})}{\tilde{z}^m}
 		=
@@ -2960,10 +2981,18 @@ Apart from minor change in notation, the only difference is that we allow $ \phi
 % 	\end{equation}
 % \end{corollary}
 
+We use the notation
+\begin{equation}
+	D_i=z_i\frac{\partial}{\partial z_i},
+	\qquad
+	Q_i=\left(z_i\frac{dx_i}{dz_i}\right)^{-1},
+\end{equation}
+where $x_i=x(z_i)$.
+
 \begin{proposition}
 	For $ n \geq 2$,
 	\begin{equation}\label{HgnAsGraphSum}
-		\omega_{g,n} + \delta_{n,2} \delta_{g,0} \frac{dX_1 dX_2}{(X_1 - X_2)^2}
+		\widehat{\omega}_{g,n}
 		=
 		[\hbar^{2g-2+n}] U_n \dotsb U_1 \sum_{\gamma \in \Gamma_n} \prod_{\{ v_j, v_l\} \in E_\gamma} w_{j,l} ,
 	\end{equation}
@@ -2993,7 +3022,7 @@ We will use a similar approach to \cref{GeneralSC} and \cite[Section 6.2]{BDKS22
 \begin{proposition}
 	In terms of $ x = \log X$,
 	\begin{equation}\label{FormulaForn=1}
-		\omega_1 (x)
+		\widehat{\omega}_1 (x)
 		=
 	    U 1 + \frac{1}{\hbar}\sum_{j=0}^\infty (d \frac{1}{dx})^j [v^j] \int_{\Upsilon=0}^{y(z(x))} L_0(v, z(x,\Upsilon), s(x,\Upsilon),\hbar) d\Upsilon \wedge dx .
 \end{equation}
@@ -3035,7 +3064,7 @@ We will use a similar approach to \cref{GeneralSC} and \cite[Section 6.2]{BDKS22
 	Therefore, we find
 	\begin{equation}
 		\begin{split}
-			\omega^\beta_{1} (X) 
+			\widehat{\omega}^\beta_{1} (X)
             &\coloneqq
             \Big\< e^{- \beta \ad_{\check{S}}} e^{- \ad_W} J(X) \Big\>
             \\
@@ -3093,34 +3122,34 @@ We will use a similar approach to \cref{GeneralSC} and \cite[Section 6.2]{BDKS22
 	\end{equation}
 	where we used \cref{FunctionL,phiAsRatio} in the last equality, so that
 	\begin{equation*}
-			\omega_1 (x)
+			\widehat{\omega}_1 (x)
             =
-            \omega_1^\beta (X) \big|_{\beta = 1}
+            \widehat{\omega}_1^\beta (X) \big|_{\beta = 1}
 			=
 			U 1 + \frac{1}{\hbar}\sum_{j=0}^\infty (d \frac{1}{dx})^j [v^j] \int_{\Upsilon=0}^{y(z(x))} L_0(v, z(x,\Upsilon), s(x,\Upsilon),\hbar) d\Upsilon \wedge dx .
 			\qedhere
 	\end{equation*}
 \end{proof}
 
-Comparing \cref{HgnAsGraphSum,FormulaForn=1} with \cite[Proof of proposition 4.4]{ABDKS24}, using \cref{TrivialTR}, we find that the following explicit formulas for multidifferentials.
+Comparing \cref{HgnAsGraphSum,FormulaForn=1} with \cite[Proof of proposition 4.4]{ABDKS24}, using \cref{TrivialTR}, we find the following explicit formulas for completed multidifferentials.
 
 \begin{proposition}\label{LeakyMultidifferentials}
-	The multidifferential generating series of leaky Hurwitz numbers with cut-and-join operator \eqref{CJ} are given by
+	The completed multidifferential generating series of leaky Hurwitz numbers with cut-and-join operator $W$ are given by
 	\begin{equation}
-		\omega_n (z_{\llbracket n\rrbracket})
+		\widehat{\omega}_n (z_{\llbracket n\rrbracket})
 		=
 		\Big( \prod_{i=1}^n T_i \Big)
 		\mb{W}_n^{\mc{S}_0} (z_{\llbracket n\rrbracket}, u_{\llbracket n\rrbracket}) 
 		+
 		\frac{\delta_{n,1}}{\hbar} \sum_{j=0}^\infty ( d \frac{1}{dx} )^j [v^j] \int_{s = 0}^{S(z)} L_0 (v, z, s, \hbar) ds \wedge \frac{dz}{z},
 	\end{equation}
-	where for a formal series $ f(u,z) $ in $u$ with coefficients one-forms in $ z$,
+	where, for $n=1$, $T\mb{W}^{\mc{S}_0}_1$ is understood after subtracting $\frac{dz}{zu\hbar}$, with the polar contribution accounted for by the integral term above; for a formal series $ f(u,z) $ in $u$ with coefficients one-forms in $ z$,
 	\begin{equation}
 		Tf (z)
 		=
-		\sum_{j,t = 0}^\infty \big(d \frac{1}{dx}\big)^j  [v^j] L_t(v, z, s, \hbar) [u^t] f(u,z)
+		\sum_{j,t = 0}^\infty \big(d \frac{1}{dx}\big)^j  [v^j] L_t(v, z, S(z), \hbar) [u^t] f(u,z)
 		=
-		\sum_{j,t = 0}^\infty \big(- d \frac{1}{dx}\big)^j  [v^j] L_t(-v, z, s, \hbar) [u^t] f(u,z) .
+		\sum_{j,t = 0}^\infty \big(- d \frac{1}{dx}\big)^j  [v^j] L_t(-v, z, S(z), \hbar) [u^t] f(u,z) .
 	\end{equation}
 \end{proposition}
 
@@ -3133,7 +3162,7 @@ Comparing \cref{HgnAsGraphSum,FormulaForn=1} with \cite[Proof of proposition 4.4
 \subsection{Explicit spectral curves for fixed leakiness}
 \label{CurvesForFixedk}
 
-Now, we consider a fixed leakiness $k \geq 0$, and take general linear combinations of  completed cycles. I.e., we consider a cut-and-join operator
+Now, we consider a fixed positive leakiness $k > 0$, and take general linear combinations of  completed cycles. I.e., we consider a cut-and-join operator
 
 \begin{equation}\label{CJ}
 	W = \sum_{l \in \Z'} w (l + \frac{k}{2}, \hbar) E_{l + k,l}.
@@ -3191,7 +3220,7 @@ In this case, we will be able to write the spectral curve explicitly.
 % \end{proof}
 
 \begin{lemma}
-	For fixed leakiness $ k$, $ \phi_{m,n,\mu}$ is non-zero only if $ \mu = - nk$. So define
+	For fixed leakiness $ k>0$, $ \phi_{m,n,\mu}$ is non-zero only if $ \mu = - nk$. So define
 	\begin{equation}\label{phi_m}
 		\phi_{m,n}(s)
 		\coloneqq
@@ -3212,11 +3241,11 @@ In this case, we will be able to write the spectral curve explicitly.
 \end{lemma}
 
 \begin{proof}
-	The recursion \eqref{phi_mnRec} is a direct specialisation of \cref{PhiRecursion}, using that with the choice of parameters there, $ \mu = m - (n+1)k$. It is straightforward to check that the given solution solves the recursion.
+	The recursion \eqref{phi_mnRec} is a direct specialisation of \cref{PhiRecursion}, using that with the choice of parameters there, $ \mu = -(n+1)k$. It is straightforward to check that the given solution solves the recursion.
 \end{proof}
 
 \begin{proposition}\label{ChangeOfCoords}
-	If $ w(j, \hbar )$ is of the shape $ w(\frac{s}{\hbar}, \hbar) = \frac{1}{\hbar} \bar{w}(s)+ \mc{O} (\hbar^0)$ for some $ \bar{w} (s) \in s \C\llbracket s \rrbracket$ with positive radius of convergence, then all $ \phi_{m,n}(s)$ are power series in $ \hbar$, and
+	Assume $k>0$. If $ w(j, \hbar )$ is of the shape $ w(\frac{s}{\hbar}, \hbar) = \frac{1}{\hbar} \bar{w}(s)+ \mc{O} (\hbar^0)$ for some $ \bar{w} (s) \in s \C\llbracket s \rrbracket$ with positive radius of convergence, then all $ \phi_{m,n}(s)$ are power series in $ \hbar$, and
 	\begin{equation}
 		\bar{\phi}_m ( z, s) 
         =
@@ -3430,7 +3459,7 @@ In this case, we will be able to write the spectral curve explicitly.
 
 
 \begin{proposition}\label{Symplectomorphism}
-	Let $ \mf{w}(z,s) = z^k \bar{w}(s)$, with $ \bar{w} $ an analytic function on $ \C$, such that $ \bar{w} (0) = 0$. The flows of $ z$ and $ s$ along $ V_\mf{w}$ are given by
+	Assume $k>0$. Let $ \mf{w}(z,s) = z^k \bar{w}(s)$, with $ \bar{w} $ an analytic function on $ \C$, such that $ \bar{w} (0) = 0$. The flows of $ z$ and $ s$ along $ V_\mf{w}$ are given by
 	\begin{align}
 		\Xi_\beta (z,s)
 		&= e^{\beta V_\mf{w}} z 
@@ -3472,7 +3501,7 @@ In this case, we will be able to write the spectral curve explicitly.
 	\end{equation}
 \end{corollary}
 
-In general $ X(z)$ is not a univalued function on all of $ \C$, but $ \frac{dX}{X}$ is meromorphic, and this is sufficient for the general topological recursion we work with.
+In general $ X(z)$ is not a univalued function on all of $ \C$, but $ \frac{dX}{X}$ is meromorphic, and this is sufficient for the general topological recursion we work with. At points where the quotient in \eqref{SpectralCurveParam} has the form $0/0$, it is understood by removable continuation from the punctured neighbourhood.
 
 
 % At least for $\bar{w}(s) = \frac{s^r}{r}$ and $ S(z) = z^q$, we get
@@ -3555,7 +3584,7 @@ In general $ X(z)$ is not a univalued function on all of $ \C$, but $ \frac{dX}{
             \\
             y(z)
             &=
-            S(z) + k S(z)^r z^k
+            S(z) + \frac{k}{r} S(z)^r z^k
         \end{cases}.
     \end{equation}
     For $ S(z) = z^q$, this recovers \cref{prop-01spectral} in the parametrisation $ y = XY $, through \cref{equ-xviaz,equ-yviaz}.
@@ -3570,25 +3599,25 @@ We consider a setup with fixed $ k > 0$. We then have the spectral curve \eqref{
 Our main result is the following theorem, whose proof will take up most of this section.
 
 \begin{theorem}\label{LeakyTRThm}
-	Consider the leaky Hurwitz numbers with cut-and-join operator \eqref{CJ} such that $ w(\frac{s}{\hbar},\hbar) = \frac{1}{\hbar} \bar{w}(s) $, where $ \bar{w}(s)$ is a rational function of $s$ with no repeated factors, and with rational $S(z)$. The multidifferentials of \cref{Correlators} are calculated by topological recursion on the spectral curve \eqref{SpectralCurveParam}.
+	Consider the leaky Hurwitz numbers with cut-and-join operator \eqref{CJ} such that $ w(\frac{s}{\hbar},\hbar) = \frac{1}{\hbar} \bar{w}(s) $, where $ \bar{w}(s)$ is a rational function of $s$ with no repeated factors and $\bar{w}(0)=0$, and with rational $S(z)$. Assume moreover that the transformations in \eqref{ChainOfTransformations} satisfy the regularity and pole-disjointness hypotheses of \cref{ThmSD}. The completed multidifferentials of \cref{Correlators} are calculated by topological recursion on the spectral curve \eqref{SpectralCurveParam}.
 \end{theorem}
 
 \begin{remark}
-    In principle, we will prove that the differentials satisfy logarithmic topological recursion. But since $dy$ is given as the differential of a well-defined function in \eqref{SpectralCurveParam}, this family of spectral curves has no logarithmic singularities, and logarithmic topological recursion on it coincides with `usual' topological recursion.
+    We prove the statement in the logarithmic/degenerate formulation. In the applications below the recursion is taken at the zeroes of $dx$; after choosing a local primitive of $dx$ near such a point, the local recursion agrees with the usual Eynard--Orantin recursion.
 \end{remark}
 
-\Cref{LeakyTRThm} does not cover some natural cases, such as the $ r$-completed cycles $ k$-leaky Hurwitz numbers \cref{LeakyTRThm} for any $ r$ > 1: in this case, $ \bar{w} (s) = \frac{s^r}{r}$ clearly has a repeated factor. However, we can extend our result to include more cases, including these, by limit arguments.
+\Cref{LeakyTRThm} does not cover some natural cases, such as the $ r$-completed cycles $ k$-leaky Hurwitz numbers for any $ r>1$: in this case, $ \bar{w} (s) = \frac{s^r}{r}$ clearly has a repeated factor. However, we can extend our result to include more cases by limit arguments.
 
 \begin{corollary}\label{LeakyTRLimit}
-    For rational functions $ \bar{w}(s)$ and $S(z)$ such that $ d x$ from \eqref{SpectralCurveParam} has simple zeroes and poles, the multidifferentials of \cref{Correlators} for the leaky Hurwitz numbers with cut-and-join operator \eqref{CJ} such that $ w(\frac{s}{\hbar}) = \frac{1}{\hbar} \bar{w}(s) $ are calculated by topological recursion on the spectral curve \eqref{SpectralCurveParam}.
+    For rational functions $ \bar{w}(s)$ and $S(z)$ such that $\bar{w}(0)=0$ and $ d x$ from \eqref{SpectralCurveParam} has simple zeroes and poles, assume that $(\bar{w},S)$ is the limit of an analytic family satisfying the hypotheses of \cref{LeakyTRThm} for which $dx$ keeps simple zeroes and poles. Then the completed multidifferentials of \cref{Correlators} for the leaky Hurwitz numbers with cut-and-join operator \eqref{CJ} such that $ w(\frac{s}{\hbar}) = \frac{1}{\hbar} \bar{w}(s) $ are calculated by topological recursion on the spectral curve \eqref{SpectralCurveParam}.
 \end{corollary}
 
 \begin{proof}
-    Assume $ \bar{w}(s)$ and $S(z)$ are rational functions such that $ dx$ has simple zeroes and poles. As having simple zeroes and poles is an open condition, we can deform $ \bar{w}$ to a rational function of the same degree with no repeated factors, while preserving the condition that $ dx $ has simple zeroes and poles. Topological recursion (in any formulation) is manifestly analytic under such deformations, as also follows from \cref{TRLimits}.
+    Apply \cref{LeakyTRThm} on the nearby fibres and take the limit. Topological recursion (in any formulation) is manifestly analytic under such deformations, as also follows from \cref{TRLimits}. The Fock-space correlators also depend analytically on the family parameters, since for fixed $(g,n)$ the coefficient extraction in \cref{LeakyMultidifferentials} involves only finitely many coefficients of $\bar w$ and $S$.
 \end{proof}
 
 \begin{remark}
-    With the more sophisticated limit arguments of \cite{BBCKS25,ABDKS25}, this corollary can be extended to cases where different special points in the sense of \cref{DefSpecialPoints} collide. As we do not currently know of any specifically interesting cases that require this, we omit this extension.
+    With the more sophisticated limit arguments of \cite{BBCKS25,ABDKS25}, this corollary can be extended to cases where different special points in the sense of \cref{DefSpecialPoints} collide. This extra input is needed for the full $q$-orbifold completed-cycle cases with $q>1$ below; we do not prove that extension here.
 \end{remark}
 
 \begin{example}
@@ -3598,7 +3627,7 @@ Our main result is the following theorem, whose proof will take up most of this 
 		=
 		\frac{1 - (qr+k) \frac{r-1}{r} z^{qr - q +k }}{z ( 1 + \frac{k}{r} z^{qr-q + k} )} dz
 	\end{equation}
-    has simple zeroes and poles, so its multidifferentials are calculated by topological recursion.
+    has simple zeroes and poles. For $q=1$, generic sufficiently small distinct non-zero $\epsilon_i$ for which the regularity and pole-disjointness hypotheses remain satisfied give nearby data by deforming $\frac{s^r}{r}$ to $\frac{s}{r}\prod_{i=1}^{r-1}(s-\epsilon_i)$, so the completed multidifferentials are calculated by topological recursion. For $q>1$, the point $0$ is a ramified value of $S(z)=z^q$, so applying the present corollary requires also deforming $S$ or invoking a collision-limit theorem.
 \end{example}
 
 \begin{remark}
@@ -3627,7 +3656,7 @@ Our main result is the following theorem, whose proof will take up most of this 
 \end{remark}
 
 \begin{example}
-    The original leaky Hurwitz numbers studied in \cite{CMR25}, expressed in Fock space in \cref{CMRFockSpace}, have cut-and-join operator $ \hbar M_k = \hbar (\mc{F}_2^k - \frac{k^2 - 1}{24} \mc{F}^k_0)$. This means that $ w(j) = \hbar (j^2 - \frac{k^2 -1}{24}) $, and hence $ w(\frac{s}{\hbar}) = \hbar^{-1} s^2 - \hbar \frac{k^2 -1}{24} \neq \frac{1}{\hbar} \bar{w}(s)$. Therefore, these in-completed leaky Hurwitz numbers are \emph{not} computed by topological recursion on the spectral curve
+    The original leaky Hurwitz numbers studied in \cite{CMR25}, expressed in Fock space in \cref{CMRFockSpace}, have cut-and-join operator $ \hbar M_k = \hbar (\mc{F}_2^k - \frac{k^2}{24} \mc{F}^k_0)$. This means that $ w(j) = \hbar (j^2 - \frac{k^2}{24}) $, and hence $ w(\frac{s}{\hbar}) = \hbar^{-1} s^2 - \hbar \frac{k^2}{24} \neq \frac{1}{\hbar} \bar{w}(s)$. Therefore, these uncompleted leaky Hurwitz numbers are \emph{not} computed by topological recursion on the spectral curve
     \begin{equation}
 		\begin{cases}
 			e^{x(z)}
@@ -3748,7 +3777,7 @@ For the remainder of this section, we will consider $ \zeta = \log z$ and $ s$ a
 
 
 \begin{lemma}\label{DualitiesPreserveTR}
-	Assume that $ S(z)$ is a rational function and $ \bar{w}(s)$ is rational with no repeated factors, and take
+	Assume that $ S(z)$ is a rational function, $ \bar{w}(s)$ is rational with no repeated factors and $\bar{w}(0)=0$, and that the transformations in \eqref{ChainOfTransformations} satisfy the hypotheses of \cref{ThmSD}. Take
 	\begin{equation}\label{TransformationDeformations}
 		\tilde{\psi} ( \theta )
 		=
@@ -3820,12 +3849,12 @@ For the remainder of this section, we will consider $ \zeta = \log z$ and $ s$ a
 \end{proof}
 
 
-Comparing \cref{LeakyMultidifferentials,DualitiesPreserveTR}, we see that we want to prove $ \omega^{(g)}_n = \tilde{\omega}^{(g)}_n$, or $ T = \tilde{T}$. In fact, we will show this last equality term by term in $t$, i.e. we will prove equality between the following two maps on one-forms $F(z)$ in $z$.
+Comparing \cref{LeakyMultidifferentials,DualitiesPreserveTR}, we see that we want to prove $ \widehat{\omega}^{(g)}_n = \tilde{\omega}^{(g)}_n$, or $ T = \tilde{T}$. In fact, we will show this last equality term by term in $t$, i.e. we will prove equality between the following two maps on one-forms $F(z)$ in $z$.
 
 \begin{align}
 	V_t F (z)
 	&=
-	\sum_{j = 0}^\infty \big(- d \frac{1}{dx}\big)^j  [v^j] L_t(-v, s,z,\hbar) F(z)
+	\sum_{j = 0}^\infty \big(- d \frac{1}{dx}\big)^j  [v^j] L_t(-v,z,s,\hbar) F(z)
 	\\
 	\begin{split}
 		\tilde{V}_t F (z)
@@ -4093,8 +4122,7 @@ At this point, it is useful to use the actual values of the functions $ \psi$, $
 	With the assumptions of \cref{DualitiesPreserveTR},
 	\begin{equation}
 		\begin{split}
-			&e^{v (\zeta - x)}
-			\del_s^t \Big\lfloor_{\bar{\sigma} \to s}
+			&\del_s^t \Big\lfloor_{\bar{\sigma} \to s}
 			e^{ (\del_\zeta+v) \mc{S}( \hbar (\del_\zeta + v) \del_{\bar{\sigma}} )\tilde{\psi} (\bar{\sigma}) }
 			e^{ \del_s \mc{S}( \hbar \del_\zeta \del_s ) \tilde{\chi} (\zeta ) }
 			e^{v \mc{S}(v \hbar \del_s) \tilde{\psi}^\vee (s)}
@@ -4109,6 +4137,7 @@ At this point, it is useful to use the actual values of the functions $ \psi$, $
 \end{lemma}
 
 \begin{proof}
+	All infinite products below are understood with a cutoff. After the coefficient indexed by $n$ in the middle finite-difference operator is fixed, all factors past the cutoff cancel, and the result is independent of the cutoff once it is at least $n$.
 	Starting from the right, we find
 	\begin{equation}
 		\begin{split}
@@ -4673,6 +4702,70 @@ We will use the following equality: using that $ g = x - \psi^\vee (y)$ and $ s 
 	\end{align*}
 \end{proof}
 
+\begin{lemma}\label{PolarCancellation}
+	In the regularised one-point convention of \cref{LeakyMultidifferentials},
+	\begin{equation}
+		\begin{split}
+			\hbar\,\tilde{T}\left(\frac{dz}{zu\hbar}\right)
+			=
+			-\sum_{j=0}^\infty (-d \frac{1}{dx})^j [v^j]
+			\Bigg(
+			&e^{-v \psi^\vee (y)} \frac{e^{-\chi (g) \del_y} - 1}{\del_y} e^{v \psi^\vee(y)} dg
+			\\
+			&-
+			e^{v(\zeta-x)}s\,d\zeta
+			\Bigg).
+		\end{split}
+	\end{equation}
+\end{lemma}
+
+\begin{proof}
+	The regularised one-point convention computes the subtracted unstable summand by extending the last sum in $\tilde{T}$ to $t=-1$, with
+	\begin{equation}
+		\big(-d\frac{1}{ds}\big)^{-1} e^{a\zeta}\frac{dz}{z}
+		=
+		e^{a\zeta}\frac{ds}{a}.
+	\end{equation}
+	Thus, from \cref{DualitiesPreserveTR},
+	\begin{equation}
+		\begin{split}
+			\hbar\,\tilde{T}\left(\frac{dz}{zu\hbar}\right)
+			&=
+			-\sum_{j,p,q=0}^\infty (-d \frac{1}{dx})^j [v^j]
+			e^{v ( \mc{S}(v\hbar \del_y)\tilde{\psi}^\vee(y)-x)}
+			\big(-d\frac{1}{dy}\big)^p e^{vg}[b^p a^q]
+			\\
+			&\quad\cdot
+			\Bigg(
+			\frac{dy}{v}
+			-
+			e^{b(\mc{S}(b\hbar\del_g)\tilde{\chi}(g)-y)}
+			\big(-d\frac{1}{dg}\big)^q e^{bs}
+			\bigg(
+			\frac{dg}{b}
+			-
+			e^{a(\mc{S}(a\hbar\del_s)\tilde{\psi}(s)-\psi(s))}
+			\frac{ds}{a}
+			\bigg)
+			\Bigg).
+		\end{split}
+	\end{equation}
+	Apply the same two formal integrations by parts as in \cref{FirstStepForn=1,SecondStepForn=1}. The first integration by parts gives the $a$-boundary contribution
+	\begin{equation}
+		\mathcal{B}_a
+		=
+		\sum_{j=0}^\infty (-d \frac{1}{dx})^j [v^j] e^{v(\zeta-x)}s\,d\zeta .
+	\end{equation}
+	The second integration by parts gives the $b$-boundary contribution
+	\begin{equation}
+		\mathcal{B}_b
+		=
+		-\sum_{j=0}^\infty (-d \frac{1}{dx})^j [v^j]
+		e^{-v\psi^\vee(y)}\frac{e^{-\chi(g)\del_y}-1}{\del_y}e^{v\psi^\vee(y)}dg .
+	\end{equation}
+	There are no remaining regular $u$-terms because the input is exactly the subtracted pole $\frac{dz}{zu\hbar}$. The sum $\mathcal{B}_a+\mathcal{B}_b$ is the displayed identity.
+\end{proof}
+
 % \begin{equation}
 % 	\begin{split}
 % 		&
@@ -4848,7 +4941,7 @@ We will use the following equality: using that $ g = x - \psi^\vee (y)$ and $ s 
 \subsection{The final proof}
 
 \begin{proof}[Proof of \cref{LeakyTRThm}]
-	We want to prove that the $ \omega_{g,n}$ of \cref{LeakyMultidifferentials} satisfy topological recursion on the spectral curve \eqref{SpectralCurveParam}. We know that the $ \tilde{\omega}_{g,n}$ of \cref{DualitiesPreserveTR,ExtraTermForn=1} do, so we want to prove that these two collections of multidifferentials are equal. We already know that to prove $ \omega_{g,n} = \tilde{\omega}_{g,n}$, it is sufficient to prove that $ T = \tilde{T}$, and that $ \bar{\omega}_1(z) $ equals the extra term of \cref{FormulaForn=1}. For the equality $ T = \tilde{T}$, by \cref{VrIsMultiplication,SubstitutionOfDerivatives}, we see that it suffices to prove that for any $ t \geq 0$
+	We want to prove that the completed multidifferentials $ \widehat{\omega}_{g,n}$ of \cref{LeakyMultidifferentials} satisfy topological recursion on the spectral curve \eqref{SpectralCurveParam}. We know that the $ \tilde{\omega}_{g,n}$ of \cref{DualitiesPreserveTR,ExtraTermForn=1} do, so we want to prove that these two collections of multidifferentials are equal. We already know that to prove $ \widehat{\omega}_{g,n} = \tilde{\omega}_{g,n}$, it is sufficient to prove that $ T = \tilde{T}$, and that $ \bar{\omega}_1(z) $ equals the integral appearing in the extra term of \cref{FormulaForn=1}, i.e. $\hbar$ times that extra contribution. For the equality $ T = \tilde{T}$, by \cref{VrIsMultiplication,SubstitutionOfDerivatives}, we see that it suffices to prove that for any $ t \geq 0$
 
 	\begin{equation}\label{LAsExponentials}
 		\begin{split}
@@ -4891,7 +4984,7 @@ We will use the following equality: using that $ g = x - \psi^\vee (y)$ and $ s 
 	\end{equation*}
 
 	Using that $ w(\frac{s}{\hbar}) = \frac{1}{\hbar}\bar{w}(s)$ and $ z = e^\zeta $, we get the desired equality.\par
-	For the extra term for $ n =1$, we consider \cref{LAsExponentials} for $ t = 0$:
+	For the extra term for $ n =1$, \cref{PolarCancellation} shows that the first two summands in the final expression for $\bar{\omega}_1$ in \cref{ExtraTermForn=1} cancel with the polar subtraction in the regularised convention of \cref{LeakyMultidifferentials}. It remains to identify the integral summand. We consider \cref{LAsExponentials} for $ t = 0$:
 	\begin{equation}
 		\begin{split}
 			L_0(-v, z, s, \hbar)
@@ -4913,7 +5006,7 @@ We will use the following equality: using that $ g = x - \psi^\vee (y)$ and $ s 
 	\begin{equation}
 		\int_{s = 0}^{S(z)} \!\! L_0 (-v, z, s, \hbar ) ds \wedge d\zeta
 		=
-		e^{-xv} \int_{\sigma=0}^{s} \Big\lfloor_{\eta \to \sigma} \!\!
+		e^{-xv} \int_{\sigma=0}^{S(z)} \Big\lfloor_{\eta \to \sigma} \!\!
 			e^{ \del_\zeta \mc{S}( \hbar \del_\zeta \del_\sigma )\tilde{\psi} (\sigma ) }
 			e^{v \zeta} e^{ \del_\eta \mc{S}( \hbar \del_\zeta \del_\eta)\tilde{\chi} (\zeta) }
 			e^{v \mc{S}(v \hbar \del_\eta) \tilde{\psi}^\vee (\eta)} d\sigma \wedge d\zeta .

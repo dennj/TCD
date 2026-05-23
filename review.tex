@@ -45,6 +45,7 @@ The following issues appear to require correction.
    \item Theorem 2.8, Remark 2.9, and Example 7.7, pp. 9 and 39: the coefficient in $M_k$ is inconsistent.
    \item Definition 3.1, Example 4.8, and the Gromov--Witten paragraph after equation (2.12): smaller notation/convention errors.
    \item Proposition 6.8, p. 36, equation (6.20): the $n=1$ case needs an explicit regularisation convention.
+   \item Additional serious issues remain in Lemma 2.23, Example 2.12, Theorem 3.12, Lemma 4.6, Definition 6.1, Lemma 6.3, Theorem 7.1, and the $n=1$ proof in Section 7; see the addendum in Section \ref{sec:addendum-remaining}.
 \end{enumerate}
 
 \section{Definition 2.2: Riemann--Hurwitz condition and normalization}
@@ -396,6 +397,7 @@ The main results may well survive these corrections, but several of the displaye
    \item insert the missing factor $1/r$ in Example 6.15;
    \item make Example 7.7 consistent with Theorem 2.8 and Remark 2.9;
    \item clarify the $n=1$ interpretation of Proposition 6.8.
+   \item address the additional serious issues in Section \ref{sec:addendum-remaining}, especially Lemma 2.23, Lemma 4.6, Definition 6.1, Lemma 6.3, and Theorem 7.1.
 \end{enumerate}
 
 \section{Overall assessment}\label{sec:assessment}
@@ -545,5 +547,350 @@ The following items should not be defended as merely cosmetic.
 I would \emph{not} claim that the main result is wrong.  The central framework appears sound after correction: the tropical polynomiality theorem, the cubic wall-crossing mechanism, the Hamiltonian-flow construction of spectral curves, and the fixed-leakiness topological-recursion theorem all appear to survive.  However, the paper needs substantial corrections in the Section 2 normalisations, in Theorem 3.12, in Example 6.15, in Example 7.7, and in the formulation of Proposition 6.8.
 
 The most delicate issue is the phrase ``completed cycles.''  The paper should make very clear which normalisation of completed cycles is being used.  If the authors intend to recover the usual Okounkov--Pandharipande completed cycles at $k=0$, the current Section 2 normalisation statements are not adequate.  If instead they define a closely related Fock-space-normalised family, then the main theory is still coherent, but the comparison with classical completed cycles must be rewritten.
+
+\section{Addendum: remaining serious issues after further review}\label{sec:addendum-remaining}
+
+This addendum records further issues that appear to remain after the first round of corrections.  Where this addendum conflicts with the more optimistic assessment above, the addendum should be understood as the stronger current assessment.
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+   \item \textbf{Character formula for simple double Hurwitz numbers: wrong exponent.}
+   In the representation-theoretic formula after Definition 2.1, the exponent of $f_{(2)}(\lambda)$ is written as $r$, but $r$ has not been defined there and later denotes a completed-cycle index.  The exponent should be the number of simple branch points
+   \[
+      b=2g-2+\ell(\mu)+\ell(\nu).
+   \]
+   The formula should read
+   \[
+      h^\bullet_{g;\mu,\nu}
+      =
+      \frac{1}{\prod_i\mu_i\prod_j\nu_j}
+      \sum_{\lambda\vdash d}
+      \chi_\lambda(\mu)\chi_\lambda(\nu)f_{(2)}(\lambda)^b.
+   \]
+
+   \item \textbf{Example 2.12: missing $\hbar^{r-1}$.}
+   With Definition 2.10, the $J$-insertions contribute $\hbar^{-\ell(\mu)-\ell(\nu)}$.  To extract the coefficient $\hbar^{2g-2}$, the term with $s$ completed-cycle vertices must contribute $\hbar^{s(r-1)}$.  Thus Example 2.12 should use
+   \[
+      W=\hbar^{r-1}\frac{\mathcal F_r^0}{r},
+   \]
+   not $W=\mathcal F_r^0/r$.
+
+   \item \textbf{Lemma 2.23: wrong current signs and missing symmetry factors.}
+   The stated expansion fails the sanity check $r=0$.  Definition 2.6 gives $\mathcal F_0^k=J_{-k}$, but the lemma gives $J_k$ for $k>0$ because $\mathbf x=(-k)$ contributes $\prod_{x_i\in\mathbf x^-}J_{-x_i}=J_k$.
+
+   A corrected version should have the signs of the actual summation variables in $\mathcal E_{-k}$ and should include automorphism denominators if $\mathbf x$ is represented as an ordered or sorted vector:
+   \[
+      \mathcal F_r^k
+      =
+      r!\sum_{g\ge0}
+      \sum_{\sum_i x_i=-k}
+      \frac{m_g(\mathbf x^+,\mathbf x^-)}
+      {|\Aut(\mathbf x^+)|\,|\Aut(\mathbf x^-)|}
+      :\prod_i J_{x_i}: .
+   \]
+   These denominators come from the $1/n!$ in the bosonic expansion of $\mathcal E_k(z)$.  The expansion before Lemma 2.23 should also explicitly exclude $j_i=0$, since it contains $J_{j_i}/j_i$.
+
+   \item \textbf{Theorem 2.36 and Theorem 2.39: formula errors in the topological-recursion preliminaries.}
+   In the Eynard--Orantin kernel, the denominator should contain the difference
+   \[
+      \omega_{0,1}(\sigma_a(z))-\omega_{0,1}(z).
+   \]
+   The printed expression is not meaningful as written.  In Theorem 2.39, the bidifferential term should have numerator
+   \[
+      d\xi_1\,d\xi_2,
+   \]
+   not $d\xi_1\,d\xi_1$.
+
+   \item \textbf{Theorem 3.12: multinomial coefficient bookkeeping is still inconsistent.}
+   The corrected genus formula is much better, but the theorem and proof remain inconsistent about coefficients.  The inclusion--exclusion identity gives a factor
+   \[
+      \binom{s}{\alpha_1,\alpha_2,\alpha_3},
+   \]
+   and the cut-graph equation in the proof also displays a multinomial coefficient.  As written, the proof does not prove the theorem.  Either the theorem is missing this multinomial coefficient, or the cut-graph equation and the normalization of the smaller Hurwitz factors must be rewritten so that the multinomial is absorbed.
+
+   \item \textbf{Theorem 3.10: incomplete sign equation in the discriminant/wall argument.}
+   The proof says that the leaky balancing condition implies that the ends of each connected component satisfy an expression of the form
+   \[
+      \sum_{i\in I}x_i+\sum_{j\in J}k_j
+   \]
+   for some $I,J$.  This is not an equation.  The intended statement should be something like
+   \[
+      \sum_{i\in I}x_i=\sum_{j\in J}k_j,
+   \]
+   up to the sign convention for leakiness.
+
+   \item \textbf{Proposition 4.2: wrong derivative coefficient in the proof.}
+   From
+   \[
+      \bar Y
+      =
+      X^{q-1}
+      \left(
+      1-\frac{k}{r}\bar Y^{r-1}X^{r-1+k}
+      \right)^{-\frac{qr}{k}-1},
+   \]
+   logarithmic differentiation should give
+   \[
+      \frac{\bar Y'}{\bar Y}
+      =
+      (q-1)\frac1X
+      +
+      \frac{qr+k}{r}
+      \frac{\bar Y^{r-1}X^{r-1+k}}
+      {1-\frac{k}{r}\bar Y^{r-1}X^{r-1+k}}
+      \left(
+      (r-1)\frac{\bar Y'}{\bar Y}
+      +
+      (r-1+k)\frac1X
+      \right).
+   \]
+   The printed line has the wrong denominator $r+1$ in this coefficient.
+
+   \item \textbf{Lemma 4.6 is wrong.}
+   The source defines
+   \[
+      z
+      =
+      X\left(
+      1-\frac{k}{r}Y^{r-1}X^{r-1+k}
+      \right)^{-r/k}.
+   \]
+   Let
+   \[
+      B=q(r-1)+k,
+      \qquad
+      T=Y^{r-1}X^{r-1+k}=X^k(XY)^{r-1}.
+   \]
+   The correct logarithmic derivative is
+   \[
+      \frac{dz}{z}
+      =
+      \frac{dX}{X(1-BT)}
+      =
+      \frac{dX}
+      {X\left(1-(q(r-1)+k)Y^{r-1}X^{r-1+k}\right)}.
+   \]
+   The printed version uses $qr+k$ instead of $q(r-1)+k$, and $X^k(XY)^r$ instead of $X^k(XY)^{r-1}$.
+
+   \item \textbf{Proposition 4.7: proof errors caused by Lemma 4.6.}
+   In the proof, the asymmetric numerator should be
+   \[
+      X_1^{r+k-2}Y(X_1)^{r-1}
+      -
+      X_2^{r+k-2}Y(X_2)^{r-1}.
+   \]
+   Moreover, the corrected Lemma 4.6 gives
+   \[
+      z\frac{\partial}{\partial z}
+      =
+      \left(1-BY^{r-1}X^{r-1+k}\right)
+      X\frac{\partial}{\partial X},
+      \qquad
+      B=q(r-1)+k.
+   \]
+   This introduces a factor and sign in the conversion to the $E_zW_{0,2}$ equation that are not present in the printed proof.
+
+   \item \textbf{Example 4.8: wrong Euler operator.}
+   For
+   \[
+      X(z)=\frac{4z}{(2+z^2)^2},
+   \]
+   one has
+   \[
+      \frac{X'(z)}{X(z)}
+      =
+      \frac{2-3z^2}{z(2+z^2)}.
+   \]
+   Therefore
+   \[
+      X\frac{\partial}{\partial X}
+      =
+      \frac{z(2+z^2)}{2-3z^2}
+      \frac{\partial}{\partial z}.
+   \]
+   The displayed operator with $(2+z)^2$ is wrong, although the later residue computation appears to use $2+z^2$.
+
+   \item \textbf{General residue computation before Theorem 4.9: wrong sign in $X(z)$.}
+   From equation \texttt{equ-xviaz}, with
+   \[
+      A=\frac{k}{r},
+      \qquad
+      B=q(r-1)+k,
+   \]
+   the correct expression is
+   \[
+      X=z(1+Az^B)^{-1/A}.
+   \]
+   The printed expression $X=z(1-Az^B)^{-1/A}$ has the wrong sign.  The following residue formula uses $1+Az^B$.
+
+   \item \textbf{Proposition 5.3: missing summation over $n$.}
+   In equation (5.17), the right-hand side contains $\Phi^{\mathfrak W}_{n,\mu}(\mathfrak P)\beta^n$ but no displayed summation over $n$.  It should include
+   \[
+      \sum_{n=0}^{\infty}
+      \sum_{l\in\mathbb Z'}
+      \sum_{\mu\in\mathbb Z}
+      \Phi^{\mathfrak W}_{n,\mu}(\mathfrak P)
+      \beta^n
+      \bigl(\hbar(l-\mu/2)\bigr)
+      E_{l-\mu,l},
+   \]
+   plus the central term.
+
+   \item \textbf{Proposition 5.7: wrong current sign for the right ramification operator.}
+   The text introduces
+   \[
+      \check S
+      =
+      \sum_{q\ge1}s_q\frac{J_q}{q\hbar}.
+   \]
+   But Definition 2.10 uses
+   \[
+      \exp\left(\sum_{q\ge1}s_q\frac{J_{-q}}{q\hbar}\right).
+   \]
+   The operator moved by adjunction should therefore be
+   \[
+      \check S
+      =
+      \sum_{q\ge1}s_q\frac{J_{-q}}{q\hbar}.
+   \]
+   This sign matters because $J_{-q}$ corresponds to the $z^q$ term used later to produce $S(z)=\sum_qs_qz^q$.
+
+   \item \textbf{Definition 6.1: wrong recursion for $\phi_{m,n,\mu}$.}
+   Since
+   \[
+      \phi_{m,n,\mu}(s)
+      =
+      \Phi^{\mathfrak W}_{n,\mu+m}(\mathfrak J_m)(s),
+   \]
+   substituting into the recursion for $\Phi$ should give
+   \[
+   \begin{aligned}
+      (n+1)\phi_{m,n+1,\mu}(s)
+      =
+      \sum_{k=0}^{\infty}
+      & w_k\!\left(\frac{s}{\hbar}+\frac{\mu+m+k}{2},\hbar\right)
+      \phi_{m,n,\mu+k}\!\left(s+\frac{\hbar k}{2}\right)
+      \\
+      &-
+      w_k\!\left(\frac{s}{\hbar}-\frac{\mu+m+k}{2},\hbar\right)
+      \phi_{m,n,\mu+k}\!\left(s-\frac{\hbar k}{2}\right).
+   \end{aligned}
+   \]
+   The source omits $m$ in the second $w_k$ argument and uses $\phi_{m,n,\mu+m+k}$ in the second term.
+
+   \item \textbf{Lemma 6.3 contains a false equality.}
+   The equality
+   \[
+      L_t(v,z,s,\hbar)
+      =
+      \bar\phi_v(z,s)^{-1}\partial_s^t\bar\phi_v(z,s)L_0(v,z,s,\hbar)
+   \]
+   is false in general.  Since $\phi_v=\bar\phi_v L_0$, the corrected statement is
+   \[
+      L_t(v,z,s,\hbar)
+      =
+      \left(
+      \partial_s
+      +
+      v\,\partial_s\log\bar\phi_1(z,s)
+      \right)^t
+      L_0(v,z,s,\hbar).
+   \]
+
+   \item \textbf{Proposition 6.8: $T$ should specify $s=S(z)$.}
+   The corrected polar-part sentence for $n=1$ is helpful, but the operator $T$ still leaves $s$ free:
+   \[
+      Tf(z)
+      =
+      \sum_{j,t\ge0}
+      \left(d\frac1{dx}\right)^j
+      [v^j]L_t(v,z,s,\hbar)[u^t]f(u,z).
+   \]
+   In Proposition 6.5 and in the actual Hurwitz multidifferentials, one should evaluate $s=S(z)$:
+   \[
+      Tf(z)
+      =
+      \sum_{j,t\ge0}
+      \left(d\frac1{dx}\right)^j
+      [v^j]L_t(v,z,S(z),\hbar)[u^t]f(u,z).
+   \]
+   If $T$ is intended to act before the substitution $s\mapsto S(z)$, the proposition should say so explicitly.
+
+   \item \textbf{Theorem 7.1 omits $\bar w(0)=0$, or else the spectral curve is wrong.}
+   Corollary 6.13 assumes $\bar w(0)=0$ and obtains
+   \[
+      y(z)=S(z)+k\bar w(S(z))z^k.
+   \]
+   In general, Proposition 5.7 gives
+   \[
+      y(z)=\Upsilon_1(z,S(z))-\Upsilon_1(z,0).
+   \]
+   For fixed leakiness this is
+   \[
+      y(z)
+      =
+      S(z)+kz^k\bigl(\bar w(S(z))-\bar w(0)\bigr).
+   \]
+   Theorem 7.1 should either add $\bar w(0)=0$ or use this corrected $y$-coordinate.  The same issue affects Corollary 7.3.
+
+   \item \textbf{Theorem 7.1 uses stronger hypotheses than it states.}
+   The proof invokes the symplectic-duality theorem for
+   \[
+      \psi(\theta)=\frac1k\log\bar w(\theta),
+      \qquad
+      \chi(\theta)=ke^{k\theta}.
+   \]
+   The cited transformation theorem requires more than ``$\bar w$ rational with no repeated factors'' and ``$S(z)$ rational.''  For example, the logarithmic terms coming from $\log\bar w$ require regularity assumptions such as simple zeroes of $S(z)-b_i$ for the zeroes and poles $b_i$ of $\bar w$, together with pole-disjointness and critical-value conditions in the relevant intermediate spectral curves.  Theorem 7.1 needs additional genericity assumptions or a separate limiting argument.
+
+   \item \textbf{Corollary 7.3's deformation argument is not sufficient as written.}
+   The deformation of $\bar w$ to a rational function with no repeated factors should preserve $\bar w(0)=0$ if the spectral curve is to remain the one in Corollary 6.13.  This is delicate for completed cycles, where
+   \[
+      \bar w(s)=\frac{s^r}{r}
+   \]
+   has a repeated zero at $0$.  A generic deformation removing repeated factors will usually split this zero and may no longer satisfy $\bar w(0)=0$, changing the $y$-coordinate unless the subtraction term above is included.
+
+   \item \textbf{The $n=1$ proof in Section 7 leaves uncancelled terms.}
+   Lemma 7.12 leaves a remaining term of the form
+   \[
+   \begin{aligned}
+      \bar\omega_1(z)
+      =
+      \sum_{j\ge0}
+      \left(-d\frac1{dx}\right)^j[v^j]
+      \Bigg(
+      &
+      e^{-v\psi^\vee(y)}
+      \frac{e^{-\chi(g)\partial_y}-1}{\partial_y}
+      e^{v\psi^\vee(y)}\,dg
+      \\
+      &-
+      e^{v(\zeta-x)}s\,d\zeta
+      \\
+      &+
+      e^{-xv}\int_{\sigma=0}^s
+      \cdots\,d\sigma\wedge d\zeta
+      \Bigg).
+   \end{aligned}
+   \]
+   In the final proof, only the integral term is matched with the integral in Proposition 6.8.  The first two terms are not shown to vanish or to be part of the polar subtraction.  At $v=0$, they give
+   \[
+      -\chi(g)\,dg-s\,d\zeta,
+   \]
+   which is generally nonzero.  The proof must either remove these terms from Lemma 7.12 or explain how they cancel with the polar part of $T W^{\mathcal S_0}_1$.
+
+   \item \textbf{Example 6.15 is fixed, but the old specialization should not be reused elsewhere.}
+   The corrected formula
+   \[
+      y(z)=S(z)+\frac{k}{r}S(z)^rz^k
+   \]
+   matches Corollary 6.13 with $\bar w(s)=s^r/r$.  Later Example 7.7 uses
+   \[
+      y(z)=S(z)+kS(z)^2z^k,
+   \]
+   which is correct for the original $M_k$ operator because its dequantization is $\bar w(s)=s^2$, not $s^2/2$.  This should not be changed, but the paper should be checked to ensure the old completed-cycle specialization is not used elsewhere.
+\end{enumerate}
+
+\subsection*{Most important fixes to make next}
+
+The next corrections should prioritize Lemma 2.23, Example 2.12, the coefficient bookkeeping in Theorem 3.12, Lemma 4.6, Definition 6.1, Lemma 6.3, the hypotheses of Theorem 7.1, and the $n=1$ proof in Section 7.  These are the issues most likely to affect correctness of the main arguments rather than just presentation.
 
 \end{document}
