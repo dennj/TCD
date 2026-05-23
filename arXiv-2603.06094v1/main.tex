@@ -528,7 +528,7 @@ We can formally exponentiate the Lie algebra $ \widehat{\mf{a}}_\infty$ to a Lie
 
 and this group naturally acts on Fock space. The orbit of the vacuum under this action turns out to be of extreme importance in the theory of integrable hierarchies (see \cite{MJD00} for more details). It is often written in terms of the vacuum expectation value $ \< g\> \coloneqq \< 0 | g | 0 \>$.
 
-\begin{theorem}[{\cite{SS83}}]
+\begin{theorem}[{\cite{SS83}}]\label{SatoKP}
     The orbit of the vacuum under the action of $ G $ on $ \Lambda$ is the space of $\tau $-functions of the Kadomtsev--Petviashvili integrable hierarchy in the variables $ t_k \coloneqq \frac{p_k}{k}$. More explicitly, for $ g \in G$, the $ \tau$-function is
     \begin{equation}
         \tau (t, g) 
@@ -655,6 +655,24 @@ This leads us to our very general definition of (leaky) Hurwitz numbers.
     \end{equation}
 \end{definition}
 
+\begin{proposition}[KP integrability of $W$-Hurwitz numbers]\label{KPIntegrability}
+    Let $W$ be a cut-and-join operator as in \cref{DefHNfromCJ}, and define
+    \begin{equation}
+        Z^W(\mathbf{p};\mathbf{s},\hbar)
+        =
+        \Big\<
+        \exp\Big(\sum_{m=1}^\infty \frac{p_m J_m}{m\hbar}\Big)
+        e^W
+        \exp\Big(\sum_{q=1}^\infty \frac{s_q J_{-q}}{q\hbar}\Big)
+        \Big\>.
+    \end{equation}
+    Then $Z^W$ is a KP $\tau$-function in the variables $t_m=\frac{p_m}{m\hbar}$, for fixed $\mathbf{s}$ and $\hbar$. Its logarithm is the generating series of the connected $W$-Hurwitz numbers.
+\end{proposition}
+
+\begin{proof}
+    Formally, the operator $e^W \exp(\sum_{q=1}^\infty s_q J_{-q}/(q\hbar))$ belongs to the completed group acting on Fock space. Hence the claim that $Z^W$ is a KP $\tau$-function follows directly from \cref{SatoKP}. The statement about the logarithm is the standard moment-cumulant relation, equivalently the inclusion-exclusion relation in \cref{DefHNfromCJ}.
+\end{proof}
+
 We will use the inclusion-exclusion relations more often to relate disconnected and connected invariants of similar types. We may also add a superscript $ \circ$ to emphasize connected invariants.
 
 \begin{example}
@@ -738,7 +756,7 @@ In principle, we could work with the weaker assumption that $ w_k (\frac{s}{\hba
 
 The (non-completed) multidifferentials are power series in the variables $ X_{\llbracket n \rrbracket}$ whose coefficients are Hurwitz numbers. On the other hand, the completed multidifferentials have better formal properties due to the entire current being present in the Fock space expression. They are very closely related, as the following proposition shows.
 
-\begin{proposition}[{\cite[Proposition 4.1]{BDKS22}}]
+\begin{proposition}[{\cite[Proposition 4.1]{BDKS22}}]\label{CompletedNoncompleted}
     The non-completed and completed multidifferentials are related by
     \begin{equation}
         \widehat{\omega}_n
@@ -3614,6 +3632,29 @@ Our main result is the following theorem, whose proof will take up most of this 
 
 \begin{proof}
     Apply \cref{LeakyTRThm} on the nearby fibres and take the limit. Topological recursion (in any formulation) is manifestly analytic under such deformations, as also follows from \cref{TRLimits}. The Fock-space correlators also depend analytically on the family parameters, since for fixed $(g,n)$ the coefficient extraction in \cref{LeakyMultidifferentials} involves only finitely many coefficients of $\bar w$ and $S$.
+\end{proof}
+
+\begin{corollary}[Universal genus-zero two-point function]\label{UniversalTwoPoint}
+    Under the hypotheses of either \cref{LeakyTRThm} or \cref{LeakyTRLimit}, let $z_i$ be local branches of the spectral parametrisation above $X_i$. Then the genus-zero two-point function satisfies
+    \begin{equation}
+        d_1d_2 H_{0,2}(X_1,X_2)
+        =
+        \frac{dz_1dz_2}{(z_1-z_2)^2}
+        -
+        \frac{dX_1dX_2}{(X_1-X_2)^2}.
+    \end{equation}
+    Equivalently, with the branch fixed by vanishing constant term in the expansion at $X_1=X_2=0$,
+    \begin{equation}
+        H_{0,2}(X_1,X_2)
+        =
+        \log\left(
+        \frac{z_1^{-1}-z_2^{-1}}{X_1^{-1}-X_2^{-1}}
+        \right).
+    \end{equation}
+\end{corollary}
+
+\begin{proof}
+    The topological recursion initial condition gives $\widehat{\omega}_{0,2}=B(z_1,z_2)=dz_1dz_2/(z_1-z_2)^2$. The relation between completed and non-completed correlators in \cref{CompletedNoncompleted} gives $\widehat{\omega}_{0,2}=\omega_{0,2}+dX_1dX_2/(X_1-X_2)^2$. Since $\omega_{0,2}=d_1d_2H_{0,2}$, the differential identity follows. The logarithmic primitive is fixed by the stated normalisation.
 \end{proof}
 
 \begin{remark}
