@@ -1,0 +1,43 @@
+name: latexdiff
+
+on:
+  push:
+    paths:
+      - 'old.tex'
+      - 'arXiv-2603.06094v1/main.tex'
+      - 'arXiv-2603.06094v1/Hurwitz.bib'
+      - '.github/workflows/latexdiff.yml'
+  workflow_dispatch:
+
+jobs:
+  diff:
+    runs-on: ubuntu-latest
+    container:
+      image: texlive/texlive:latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Stage bib next to diff.tex
+        run: cp arXiv-2603.06094v1/Hurwitz.bib .
+
+      - name: Run latexdiff
+        run: |
+          latexdiff \
+            --flatten \
+            --math-markup=whole \
+            --append-safecmd="cref,Cref,eqref,ref" \
+            --packages=amsmath,hyperref,biblatex \
+            old.tex arXiv-2603.06094v1/main.tex > diff.tex
+
+      - name: Compile diff.tex (LuaLaTeX + biber)
+        run: |
+          latexmk -lualatex -bibtex- \
+                  -e '$biber=q[biber %O %B]; $bibtex_use=2' \
+                  -interaction=nonstopmode -halt-on-error diff.tex
+
+      - name: Upload diff.pdf
+        uses: actions/upload-artifact@v4
+        with:
+          name: diff-pdf
+          path: diff.pdf
