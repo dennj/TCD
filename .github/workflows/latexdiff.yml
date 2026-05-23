@@ -24,10 +24,12 @@ jobs:
       - name: Run latexdiff
         run: |
           latexdiff \
+            --type=CFONT \
             --flatten \
             --math-markup=whole \
             --append-safecmd="cref,Cref,eqref,ref" \
             --packages=amsmath,hyperref,biblatex \
+            --config "PICTUREENV=(?:picture|tikzpicture|DIFnomarkup)[\w\d*@]*" \
             old.tex arXiv-2603.06094v1/main.tex > diff.tex
 
       - name: Compile diff.tex (LuaLaTeX + biber)
